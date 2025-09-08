@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación - CETPRO Arsenio Mendoza Flor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ubicacion.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="cabecera">
+        <div class="nav-secundario">
+            <div class="nav-secundario-izquierda">
+                <a href="index.html#preguntas-frecuentes"><i class="fa-solid fa-circle-question"></i>Preguntas Frecuentes</a>
+                <p><i class="fa-solid fa-envelope"></i>soporte@cetprodamf.edu.pe</p>
+            </div>
+            <div class="nav-secundario-derecha">
+                <ul>
+                    <li><a href="inicio-sesion.html">Iniciar sesión</a></li>
+                    <li><a href="registro.html">Registrarse</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="contenedor">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo-cetprodamf.png" alt="Logo CETPRO Arsenio Mendoza Flor"></a>
+            </div>
+            <label for="menu-toggle" class="menu-hamburguesa"><i class="fas fa-bars"></i></label>
+            <input type="checkbox" id="menu-toggle">
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="programas.html">Programas de Estudios</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="ubicacion.html" class="activo">Ubicación</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="enlace-social-cabecera">
+                <ul>
+                    <li><a href="https://www.facebook.com/flor.mendozaflor" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.tiktok.com/@tu-perfil" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                    <li><a href="mailto:info@cetprojct.edu.pe"><i class="fas fa-envelope"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Banner de página -->
+        <section class="page-banner">
+            <div class="page-overlay"></div>
+            <div class="contenedor">
+                <div class="page-banner-content">
+                    <h1>Nuestra Ubicación</h1>
+                    <p>Encuentra fácilmente nuestras instalaciones en el corazón de Yanacancha, Pasco</p>
+                    <nav class="breadcrumb">
+                        <a href="index.html">Inicio</a>
+                        <span>/</span>
+                        <span>Ubicación</span>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa principal -->
+        <section class="seccion-mapa-principal">
+            <div class="mapa-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.9!2d-76.25!3d-10.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDM5JzAwLjAiUyA3NsKwMTUnMDAuMCJX!5e0!3m2!1ses!2spe!4v1642000000000!5m2!1ses!2spe" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div class="mapa-overlay">
+                    <div class="ubicacion-info-card">
+                        <div class="info-header">
+                            <h3>CETPRO Arsenio Mendoza Flor</h3>
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.8 (127 reseñas)</span>
+                            </div>
+                        </div>
+                        <div class="info-details">
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Av. Minero N° 500, Yanacancha - Pasco</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+51 954 803 212</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Lun - Vie: 8:00 AM - 8:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="info-actions">
+                            <a href="https://goo.gl/maps/ejemplo" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-directions"></i>
+                                Cómo llegar
+                            </a>
+                            <a href="tel:+51954803212" class="btn btn-secondary">
+                                <i class="fas fa-phone"></i>
+                                Llamar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Información de ubicación -->
+        <section class="seccion-info-ubicacion">
+            <div class="contenedor">
+                <div class="ubicacion-grid">
+                    <div class="ubicacion-detalles">
+                        <div class="seccion-header">
+                            <h2>Información de Ubicación</h2>
+                            <p>Todo lo que necesitas saber para visitarnos</p>
+                        </div>
+                        
+                        <div class="detalles-list">
+                            <div class="detalle-card">
+                                <div class="detalle-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="detalle-content">
+                                    <h4>Dirección Completa</h4>
+                                    <p>Av. Minero N° 500<br>Yanacancha - Pasco<br>Perú - Código Postal: 19001</p>
+                                    <button class="btn-copiar" data-texto="Av. Minero N° 500, Yanacancha - Pasco, Perú">
+                                        <i class="fas fa-copy"></i>
+                                        Copiar dirección
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="detalle-card">
+                                <div class="detalle-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="detalle-content">
+                                    <h4>Horarios de Atención</h4>
+                                    <div class="horarios-grid">
+                                        <div class="horario-item">
+                                            <span class="dia">Lunes - Viernes</span>
+                                            <span class="hora">8:00 AM - 1:00 PM<br>3:00 PM - 8:00 PM</span>
+                                        </div>
+                                        <div class="horario-item">
+                                            <span class="dia">Sábados</span>
+                                            <span class="hora">8:00 AM - 12:00 PM</span>
+                                        </div>
+                                        <div class="horario-item">
+                                            <span class="dia">Domingos</span>
+                                            <span class="hora cerrado">Cerrado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="detalle-card">
+                                <div class="detalle-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="detalle-content">
+                                    <h4>Contacto Directo</h4>
+                                    <div class="contacto-items">
+                                        <a href="tel:+51954803212" class="contacto-item">
+                                            <i class="fas fa-mobile-alt"></i>
+                                            <span>+51 954 803 212</span>
+                                        </a>
+                                        <a href="tel:+51063421890" class="contacto-item">
+                                            <i class="fas fa-phone"></i>
+                                            <span>(063) 421-8900</span>
+                                        </a>
+                                        <a href="mailto:info@cetprojct.edu.pe" class="contacto-item">
+                                            <i class="fas fa-envelope"></i>
+                                            <span>info@cetprojct.edu.pe</span>
+                                        </a>
+                                        <a href="https://wa.me/51954803212" target="_blank" class="contacto-item whatsapp">
+                                            <i class="fab fa-whatsapp"></i>
+                                            <span>WhatsApp</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="ubicacion-visual">
+                        <div class="imagen-sede">
+                            <img src="img/sede-principal.jpg" alt="Sede Principal CETPRO">
+                            <div class="imagen-overlay">
+                                <h4>Sede Principal</h4>
+                                <p>Modernas instalaciones equipadas con tecnología de vanguardia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stats-ubicacion">
+                            <div class="stat-item">
+                                <div class="stat-number">2,500m²</div>
+                                <div class="stat-label">Área total</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">12</div>
+                                <div class="stat-label">Talleres especializados</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Estudiantes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cómo llegar -->
+        <section class="seccion-como-llegar">
+            <div class="contenedor">
+                <div class="seccion-header">
+                    <h2>¿Cómo llegar?</h2>
+                    <p>Diferentes opciones de transporte para llegar a nuestras instalaciones</p>
+                </div>
+                
+                <div class="transporte-grid">
+                    <div class="transporte-card">
+                        <div class="transporte-icon">
+                            <i class="fas fa-bus"></i>
+                        </div>
+                        <h4>Transporte Público</h4>
+                        <div class="rutas-list">
+                            <div class="ruta-item">
+                                <span class="ruta-numero">Línea 1</span>
+                                <span class="ruta-descripcion">Centro - Yanacancha</span>
+                            </div>
+                            <div class="ruta-item">
+                                <span class="ruta-numero">Línea 3</span>
+                                <span class="ruta-descripcion">Terminal - Av. Minero</span>
+                            </div>
+                            <div class="ruta-item">
+                                <span class="ruta-numero">Combi</span>
+                                <span class="ruta-descripcion">Ruta Yanacancha</span>
+                            </div>
+                        </div>
+                        <div class="transporte-info">
+                            <span><i class="fas fa-clock"></i> 15-20 min desde el centro</span>
+                            <span><i class="fas fa-coins"></i> S/ 1.50 - S/ 2.00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="transporte-card">
+                        <div class="transporte-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h4>Vehículo Particular</h4>
+                        <div class="direcciones-list">
+                            <div class="direccion-item">
+                                <strong>Desde el Centro:</strong>
+                                <p>Tomar Av. Los Mineros hacia el norte, continuar por 2.5 km hasta llegar al N° 500.</p>
+                            </div>
+                            <div class="direccion-item">
+                                <strong>Desde Chaupimarca:</strong>
+                                <p>Bajar por Av. Centenario, girar en Av. Los Mineros hacia Yanacancha.</p>
+                            </div>
+                        </div>
+                        <div class="transporte-info">
+                            <span><i class="fas fa-clock"></i> 10-15 min desde el centro</span>
+                            <span><i class="fas fa-parking"></i> Estacionamiento disponible</span>
+                        </div>
+                    </div>
+                    
+                    <div class="transporte-card">
+                        <div class="transporte-icon">
+                            <i class="fas fa-taxi"></i>
+                        </div>
+                        <h4>Taxi / Uber</h4>
+                        <div class="taxi-info">
+                            <p>Solicita un taxi o Uber con destino a "CETPRO Arsenio Mendoza Flor" o "Av. Minero 500, Yanacancha".</p>
+                        </div>
+                        <div class="transporte-info">
+                            <span><i class="fas fa-clock"></i> 8-12 min desde el centro</span>
+                            <span><i class="fas fa-coins"></i> S/ 8.00 - S/ 12.00</span>
+                        </div>
+                        <div class="taxi-apps">
+                            <a href="#" class="app-link">
+                                <img src="img/uber-logo.png" alt="Uber">
+                            </a>
+                            <a href="#" class="app-link">
+                                <img src="img/beat-logo.png" alt="Beat">
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="transporte-card">
+                        <div class="transporte-icon">
+                            <i class="fas fa-walking"></i>
+                        </div>
+                        <h4>A Pie</h4>
+                        <div class="caminar-info">
+                            <p>Si te encuentras en el centro de Yanacancha, puedes llegar caminando por la Av. Los Mineros.</p>
+                        </div>
+                        <div class="transporte-info">
+                            <span><i class="fas fa-clock"></i> 25-30 min desde Plaza Yanacancha</span>
+                            <span><i class="fas fa-route"></i> 2.2 km de distancia</span>
+                        </div>
+                        <div class="caminar-tips">
+                            <p><i class="fas fa-info-circle"></i> Ruta segura y bien iluminada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Referencias y puntos de interés -->
+        <section class="seccion-referencias">
+            <div class="contenedor">
+                <div class="seccion-header">
+                    <h2>Referencias y Puntos de Interés</h2>
+                    <p>Lugares conocidos cerca de nuestras instalaciones</p>
+                </div>
+                
+                <div class="referencias-grid">
+                    <div class="referencia-card">
+                        <div class="referencia-icon">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <h4>Hospital Daniel Alcides Carrión</h4>
+                        <p>A 800 metros de nuestras instalaciones</p>
+                        <span class="distancia">5 min caminando</span>
+                    </div>
+                    
+                    <div class="referencia-card">
+                        <div class="referencia-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h4>Mercado Modelo Yanacancha</h4>
+                        <p>Principal centro comercial de la zona</p>
+                        <span class="distancia">10 min caminando</span>
+                    </div>
+                    
+                    <div class="referencia-card">
+                        <div class="referencia-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h4>Universidad Nacional Daniel Alcides Carrión</h4>
+                        <p>Campus principal de la UNDAC</p>
+                        <span class="distancia">15 min caminando</span>
+                    </div>
+                    
+                    <div class="referencia-card">
+                        <div class="referencia-icon">
+                            <i class="fas fa-gas-pump"></i>
+                        </div>
+                        <h4>Grifo Petroperú</h4>
+                        <p>Estación de servicio en Av. Los Mineros</p>
+                        <span class="distancia">3 min caminando</span>
+                    </div>
+                    
+                    <div class="referencia-card">
+                        <div class="referencia-icon">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <h4>Plaza de Armas Yanacancha</h4>
+                        <p>Centro cívico del distrito</p>
+                        <span class="distancia">20 min caminando</span>
+                    </div>
+                    
+                    <div class="referencia-card">
+                        <div class="referencia-icon">
+                            <i class="fas fa-bus-alt"></i>
+                        </div>
+                        <h4>Terminal de Combis</h4>
+                        <p>Paradero principal de transporte público</p>
+                        <span class="distancia">12 min caminando</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería de instalaciones -->
+        <section class="seccion-galeria-instalaciones">
+            <div class="contenedor">
+                <div class="seccion-header">
+                    <h2>Nuestras Instalaciones</h2>
+                    <p>Conoce nuestros espacios educativos y áreas comunes</p>
+                </div>
+                
+                <div class="galeria-grid">
+                    <div class="galeria-item principal">
+                        <img src="img/instalacion-1.jpg" alt="Fachada Principal">
+                        <div class="galeria-overlay">
+                            <h4>Fachada Principal</h4>
+                            <p>Entrada principal con moderno diseño arquitectónico</p>
+                        </div>
+                    </div>
+                    
+                    <div class="galeria-item">
+                        <img src="img/instalacion-2.jpg" alt="Laboratorio de Cómputo">
+                        <div class="galeria-overlay">
+                            <h4>Laboratorio de Cómputo</h4>
+                            <p>30 equipos de última generación</p>
+                        </div>
+                    </div>
+                    
+                    <div class="galeria-item">
+                        <img src="img/instalacion-3.jpg" alt="Taller de Mecánica">
+                        <div class="galeria-overlay">
+                            <h4>Taller de Mecánica</h4>
+                            <p>Equipos profesionales para práticas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="galeria-item">
+                        <img src="img/instalacion-4.jpg" alt="Aula de Peluquería">
+                        <div class="galeria-overlay">
+                            <h4>Aula de Peluquería</h4>
+                            <p>Salón completamente equipado</p>
+                        </div>
+                    </div>
+                    
+                    <div class="galeria-item">
+                        <img src="img/instalacion-5.jpg" alt="Biblioteca">
+                        <div class="galeria-overlay">
+                            <h4>Biblioteca</h4>
+                            <p>Espacio de estudio y consulta</p>
+                        </div>
+                    </div>
+                    
+                    <div class="galeria-item">
+                        <img src="img/instalacion-6.jpg" alt="Cafetería">
+                        <div class="galeria-overlay">
+                            <h4>Cafetería</h4>
+                            <p>Área de descanso y alimentación</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="galeria-acciones">
+                    <button class="btn btn-primary" id="ver-mas-fotos">
+                        <i class="fas fa-images"></i>
+                        Ver más fotos
+                    </button>
+                    <button class="btn btn-secondary" id="tour-virtual">
+                        <i class="fas fa-street-view"></i>
+                        Tour Virtual 360°
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios adicionales -->
+        <section class="seccion-servicios-adicionales">
+            <div class="contenedor">
+                <div class="seccion-header">
+                    <h2>Servicios y Comodidades</h2>
+                    <p>Todo lo que encontrarás en nuestras instalaciones</p>
+                </div>
+                
+                <div class="servicios-grid">
+                    <div class="servicio-item">
+                        <i class="fas fa-parking"></i>
+                        <h4>Estacionamiento</h4>
+                        <p>Espacios seguros para vehículos y motocicletas</p>
+                    </div>
+                    
+                    <div class="servicio-item">
+                        <i class="fas fa-wifi"></i>
+                        <h4>WiFi Gratuito</h4>
+                        <p>Internet de alta velocidad en todas las áreas</p>
+                    </div>
+                    
+                    <div class="servicio-item">
+                        <i class="fas fa-wheelchair"></i>
+                        <h4>Accesibilidad</h4>
+                        <p>Instalaciones adaptadas para personas con discapacidad</p>
+                    </div>
+                    
+                    <div class="servicio-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Seguridad 24/7</h4>
+                        <p>Vigilancia permanente y cámaras de seguridad</p>
+                    </div>
+                    
+                    <div class="servicio-item">
+                        <i class="fas fa-coffee"></i>
+                        <h4>Cafetería</h4>
+                        <p>Servicio de alimentación y bebidas</p>
+                    </div>
+                    
+                    <div class="servicio-item">
+                        <i class="fas fa-first-aid"></i>
+                        <h4>Tópico</h4>
+                        <p>Atención médica básica y primeros auxilios</p>
+                    </div>
+                    
+                    <div class="servicio-item">
+                        <i class="fas fa-book"></i>
+                        <h4>Biblioteca</h4>
+                        <p>Recursos bibliográficos y espacios de estudio</p>
+                    </div>
+                    
+                    <div class="servicio-item">
+                        <i class="fas fa-tools"></i>
+                        <h4>Talleres Equipados</h4>
+                        <p>Herramientas y maquinaria profesional</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="seccion-cta">
+            <div class="contenedor">
+                <div class="cta-content">
+                    <h2>¿Listo para visitarnos?</h2>
+                    <p>Ven y conoce nuestras instalaciones, habla con nuestros asesores y descubre todo lo que tenemos para ofrecerte</p>
+                    <div class="cta-buttons">
+                        <a href="https://goo.gl/maps/ejemplo" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-directions"></i>
+                            Cómo llegar
+                        </a>
+                        <a href="contacto.html" class="btn btn-secondary">
+                            <i class="fas fa-calendar"></i>
+                            Agendar visita
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <div class="columna contacto">
+                <h5>Contacto</h5>
+                <p><i class="fas fa-phone"></i> +51 954 803 212</p>
+                <p><i class="fas fa-envelope"></i> info@cetprojct.edu.pe</p>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Minero N° 500 - Yanacancha - Pasco</p>
+                <div class="enlace-social-pie">
+                    <ul>
+                        <li><a href="https://www.facebook.com/flor.mendozaflor" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@tu-perfil" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                        <li><a href="mailto:info@cetprojct.edu.pe"><i class="fas fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="columna noticias">
+                <h5>Horarios</h5>
+                <div class="noticia">
+                    <p>Lunes a Viernes: 8:00 AM - 8:00 PM</p>
+                    <span>Atención continua</span>
+                </div>
+                <div class="noticia">
+                    <p>Sábados: 8:00 AM - 12:00 PM</p>
+                    <span>Solo informes</span>
+                </div>
+            </div>
+            <div class="columna enlaces-rapidos">
+                <h5>Enlaces Rápidos</h5>
+                <ul>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="programas.html">Programas</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="ubicacion.html">Ubicación</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pie-inferior">
+            <p>© 2025 CETPRO Arsenio Mendoza Flor | Todos los derechos reservados | <a href="politica-privacidad.html">Política de privacidad</a></p>
+        </div>
+    </footer>
+
+    <!-- Modal para galería -->
+    <div class="modal-galeria" id="modal-galeria">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img src="" alt="" id="modal-imagen">
+            <div class="modal-info">
+                <h4 id="modal-titulo"></h4>
+                <p id="modal-descripcion"></p>
+            </div>
+            <div class="modal-nav">
+                <button class="modal-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="modal-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/ubicacion.js"></script>
+</body>
+</html>

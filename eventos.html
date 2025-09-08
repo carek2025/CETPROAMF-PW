@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - CETPRO Arsenio Mendoza Flor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/eventos.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="cabecera">
+        <div class="nav-secundario">
+            <div class="nav-secundario-izquierda">
+                <a href="index.html#preguntas-frecuentes"><i class="fa-solid fa-circle-question"></i>Preguntas Frecuentes</a>
+                <p><i class="fa-solid fa-envelope"></i>soporte@cetprodamf.edu.pe</p>
+            </div>
+            <div class="nav-secundario-derecha">
+                <ul>
+                    <li><a href="inicio-sesion.html">Iniciar sesión</a></li>
+                    <li><a href="registro.html">Registrarse</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="contenedor">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo-cetprodamf.png" alt="Logo CETPRO Arsenio Mendoza Flor"></a>
+            </div>
+            <label for="menu-toggle" class="menu-hamburguesa"><i class="fas fa-bars"></i></label>
+            <input type="checkbox" id="menu-toggle">
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="programas.html">Programas de Estudios</a></li>
+                    <li><a href="eventos.html" class="activo">Eventos</a></li>
+                    <li><a href="ubicacion.html">Ubicación</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="enlace-social-cabecera">
+                <ul>
+                    <li><a href="https://www.facebook.com/flor.mendozaflor" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.tiktok.com/@tu-perfil" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                    <li><a href="mailto:info@cetprojct.edu.pe"><i class="fas fa-envelope"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Banner de página -->
+        <section class="page-banner">
+            <div class="page-overlay"></div>
+            <div class="contenedor">
+                <div class="page-banner-content">
+                    <h1>Eventos y Actividades</h1>
+                    <p>Mantente al día con todas nuestras actividades académicas, culturales y de vinculación</p>
+                    <nav class="breadcrumb">
+                        <a href="index.html">Inicio</a>
+                        <span>/</span>
+                        <span>Eventos</span>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filtros y búsqueda -->
+        <section class="seccion-filtros-eventos">
+            <div class="contenedor">
+                <div class="filtros-container">
+                    <div class="buscador-eventos">
+                        <div class="buscador-input">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="search-eventos" placeholder="Buscar eventos...">
+                        </div>
+                    </div>
+                    
+                    <div class="filtros-eventos">
+                        <button class="filtro-btn activo" data-filtro="todos">Todos</button>
+                        <button class="filtro-btn" data-filtro="academicos">Académicos</button>
+                        <button class="filtro-btn" data-filtro="culturales">Culturales</button>
+                        <button class="filtro-btn" data-filtro="deportivos">Deportivos</button>
+                        <button class="filtro-btn" data-filtro="graduaciones">Graduaciones</button>
+                        <button class="filtro-btn" data-filtro="talleres">Talleres</button>
+                        <button class="filtro-btn" data-filtro="conferencias">Conferencias</button>
+                    </div>
+                    
+                    <div class="vista-toggle">
+                        <button class="vista-btn activo" data-vista="grid">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button class="vista-btn" data-vista="lista">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eventos destacados -->
+        <section class="seccion-eventos-destacados">
+            <div class="contenedor">
+                <div class="seccion-header">
+                    <h2>Eventos Destacados</h2>
+                    <p>Los eventos más importantes de este mes</p>
+                </div>
+                
+                <div class="eventos-destacados-slider">
+                    <div class="evento-destacado">
+                        <div class="evento-imagen">
+                            <img src="img/evento-destacado-1.jpg" alt="Feria Tecnológica 2025">
+                            <div class="evento-badge">Próximamente</div>
+                        </div>
+                        <div class="evento-contenido">
+                            <div class="evento-fecha">
+                                <span class="dia">25</span>
+                                <span class="mes">ENE</span>
+                            </div>
+                            <div class="evento-info">
+                                <h3>Feria Tecnológica CETPRO 2025</h3>
+                                <p>Exposición de proyectos innovadores desarrollados por nuestros estudiantes de todas las especialidades técnicas.</p>
+                                <div class="evento-detalles">
+                                    <span><i class="fas fa-clock"></i> 9:00 AM - 5:00 PM</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Auditorio Principal</span>
+                                    <span><i class="fas fa-users"></i> Entrada libre</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Más información</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="evento-destacado">
+                        <div class="evento-imagen">
+                            <img src="img/evento-destacado-2.jpg" alt="Graduación 2024">
+                            <div class="evento-badge finalizado">Finalizado</div>
+                        </div>
+                        <div class="evento-contenido">
+                            <div class="evento-fecha">
+                                <span class="dia">15</span>
+                                <span class="mes">DIC</span>
+                            </div>
+                            <div class="evento-info">
+                                <h3>Ceremonia de Graduación 2024</h3>
+                                <p>Celebramos el logro de 180 nuevos técnicos profesionales que se incorporan al mercado laboral.</p>
+                                <div class="evento-detalles">
+                                    <span><i class="fas fa-clock"></i> 7:00 PM</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Teatro Municipal</span>
+                                    <span><i class="fas fa-users"></i> 180 graduados</span>
+                                </div>
+                                <a href="#" class="btn btn-secondary">Ver galería</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lista de eventos -->
+        <section class="seccion-eventos-lista">
+            <div class="contenedor">
+                <div class="eventos-header">
+                    <h2>Todos los Eventos</h2>
+                    <div class="eventos-stats">
+                        <span id="eventos-count">12 eventos encontrados</span>
+                    </div>
+                </div>
+                
+                <div class="eventos-grid" id="eventos-container">
+                    <!-- Evento 1 -->
+                    <div class="evento-card" data-categoria="academicos" data-fecha="2025-01-30">
+                        <div class="evento-imagen">
+                            <img src="img/evento-1.jpg" alt="Taller de Emprendimiento">
+                            <div class="evento-fecha-badge">
+                                <span class="dia">30</span>
+                                <span class="mes">ENE</span>
+                            </div>
+                        </div>
+                        <div class="evento-contenido">
+                            <div class="evento-categoria">Académico</div>
+                            <h3>Taller de Emprendimiento Digital</h3>
+                            <p>Aprende las bases para crear tu propio negocio digital con herramientas modernas y estrategias efectivas.</p>
+                            <div class="evento-meta">
+                                <span><i class="fas fa-clock"></i> 2:00 PM - 6:00 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Aula 201</span>
+                                <span><i class="fas fa-user"></i> Prof. Carlos Mendoza</span>
+                            </div>
+                            <div class="evento-acciones">
+                                <button class="btn btn-primary btn-inscribir" data-evento="1">Inscribirse</button>
+                                <button class="btn-favorito" data-evento="1">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Evento 2 -->
+                    <div class="evento-card" data-categoria="culturales" data-fecha="2025-02-05">
+                        <div class="evento-imagen">
+                            <img src="img/evento-2.jpg" alt="Festival Cultural">
+                            <div class="evento-fecha-badge">
+                                <span class="dia">05</span>
+                                <span class="mes">FEB</span>
+                            </div>
+                        </div>
+                        <div class="evento-contenido">
+                            <div class="evento-categoria cultural">Cultural</div>
+                            <h3>Festival Cultural Intercultural</h3>
+                            <p>Celebración de la diversidad cultural con presentaciones artísticas, gastronomía típica y exposiciones.</p>
+                            <div class="evento-meta">
+                                <span><i class="fas fa-clock"></i> 10:00 AM - 8:00 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Patio Central</span>
+                                <span><i class="fas fa-users"></i> Toda la comunidad</span>
+                            </div>
+                            <div class="evento-acciones">
+                                <button class="btn btn-primary btn-inscribir" data-evento="2">Participar</button>
+                                <button class="btn-favorito" data-evento="2">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Evento 3 -->
+                    <div class="evento-card" data-categoria="talleres" data-fecha="2025-02-10">
+                        <div class="evento-imagen">
+                            <img src="img/evento-3.jpg" alt="Taller de Soldadura">
+                            <div class="evento-fecha-badge">
+                                <span class="dia">10</span>
+                                <span class="mes">FEB</span>
+                            </div>
+                        </div>
+                        <div class="evento-contenido">
+                            <div class="evento-categoria taller">Taller</div>
+                            <h3>Taller Intensivo de Soldadura TIG</h3>
+                            <p>Curso práctico intensivo para dominar las técnicas avanzadas de soldadura TIG en diferentes materiales.</p>
+                            <div class="evento-meta">
+                                <span><i class="fas fa-clock"></i> 8:00 AM - 5:00 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Taller de Soldadura</span>
+                                <span><i class="fas fa-user"></i> Ing. Roberto Silva</span>
+                            </div>
+                            <div class="evento-acciones">
+                                <button class="btn btn-primary btn-inscribir" data-evento="3">Inscribirse</button>
+                                <button class="btn-favorito" data-evento="3">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Evento 4 -->
+                    <div class="evento-card" data-categoria="conferencias" data-fecha="2025-02-15">
+                        <div class="evento-imagen">
+                            <img src="img/evento-4.jpg" alt="Conferencia IA">
+                            <div class="evento-fecha-badge">
+                                <span class="dia">15</span>
+                                <span class="mes">FEB</span>
+                            </div>
+                        </div>
+                        <div class="evento-contenido">
+                            <div class="evento-categoria conferencia">Conferencia</div>
+                            <h3>Inteligencia Artificial en la Industria</h3>
+                            <p>Conferencia magistral sobre el impacto de la IA en los sectores productivos y las oportunidades laborales.</p>
+                            <div class="evento-meta">
+                                <span><i class="fas fa-clock"></i> 7:00 PM - 9:00 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Auditorio Principal</span>
+                                <span><i class="fas fa-user"></i> Dr. Ana Gutiérrez</span>
+                            </div>
+                            <div class="evento-acciones">
+                                <button class="btn btn-primary btn-inscribir" data-evento="4">Asistir</button>
+                                <button class="btn-favorito" data-evento="4">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Evento 5 -->
+                    <div class="evento-card" data-categoria="deportivos" data-fecha="2025-02-20">
+                        <div class="evento-imagen">
+                            <img src="img/evento-5.jpg" alt="Torneo Deportivo">
+                            <div class="evento-fecha-badge">
+                                <span class="dia">20</span>
+                                <span class="mes">FEB</span>
+                            </div>
+                        </div>
+                        <div class="evento-contenido">
+                            <div class="evento-categoria deportivo">Deportivo</div>
+                            <h3>Torneo Intercarreras de Fútbol</h3>
+                            <p>Competencia deportiva entre estudiantes de diferentes programas técnicos para fomentar la integración.</p>
+                            <div class="evento-meta">
+                                <span><i class="fas fa-clock"></i> 9:00 AM - 6:00 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Campo Deportivo</span>
+                                <span><i class="fas fa-users"></i> Todas las carreras</span>
+                            </div>
+                            <div class="evento-acciones">
+                                <button class="btn btn-primary btn-inscribir" data-evento="5">Inscribir equipo</button>
+                                <button class="btn-favorito" data-evento="5">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Evento 6 -->
+                    <div class="evento-card" data-categoria="graduaciones" data-fecha="2025-03-15">
+                        <div class="evento-imagen">
+                            <img src="img/evento-6.jpg" alt="Graduación Marzo">
+                            <div class="evento-fecha-badge">
+                                <span class="dia">15</span>
+                                <span class="mes">MAR</span>
+                            </div>
+                        </div>
+                        <div class="evento-contenido">
+                            <div class="evento-categoria graduacion">Graduación</div>
+                            <h3>Ceremonia de Graduación - Promoción Marzo</h3>
+                            <p>Celebración de graduación para los estudiantes que culminan sus estudios en el primer trimestre del año.</p>
+                            <div class="evento-meta">
+                                <span><i class="fas fa-clock"></i> 7:00 PM - 10:00 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Teatro Municipal</span>
+                                <span><i class="fas fa-users"></i> 95 graduados</span>
+                            </div>
+                            <div class="evento-acciones">
+                                <button class="btn btn-primary btn-inscribir" data-evento="6">Confirmar asistencia</button>
+                                <button class="btn-favorito" data-evento="6">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paginación -->
+                <div class="paginacion">
+                    <button class="pag-btn" data-pagina="prev">
+                        <i class="fas fa-chevron-left"></i>
+                        Anterior
+                    </button>
+                    <div class="pag-numeros">
+                        <button class="pag-numero activo" data-pagina="1">1</button>
+                        <button class="pag-numero" data-pagina="2">2</button>
+                        <button class="pag-numero" data-pagina="3">3</button>
+                    </div>
+                    <button class="pag-btn" data-pagina="next">
+                        Siguiente
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calendario de eventos -->
+        <section class="seccion-calendario">
+            <div class="contenedor">
+                <div class="seccion-header">
+                    <h2>Calendario de Eventos</h2>
+                    <p>Vista mensual de todas nuestras actividades programadas</p>
+                </div>
+                
+                <div class="calendario-container">
+                    <div class="calendario-header">
+                        <button class="calendario-nav" id="prev-month">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <h3 id="calendario-titulo">Enero 2025</h3>
+                        <button class="calendario-nav" id="next-month">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="calendario-grid">
+                        <div class="calendario-dia-header">Dom</div>
+                        <div class="calendario-dia-header">Lun</div>
+                        <div class="calendario-dia-header">Mar</div>
+                        <div class="calendario-dia-header">Mié</div>
+                        <div class="calendario-dia-header">Jue</div>
+                        <div class="calendario-dia-header">Vie</div>
+                        <div class="calendario-dia-header">Sáb</div>
+                        
+                        <!-- Los días se generarán dinámicamente con JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="calendario-leyenda">
+                    <div class="leyenda-item">
+                        <span class="leyenda-color academico"></span>
+                        <span>Académicos</span>
+                    </div>
+                    <div class="leyenda-item">
+                        <span class="leyenda-color cultural"></span>
+                        <span>Culturales</span>
+                    </div>
+                    <div class="leyenda-item">
+                        <span class="leyenda-color deportivo"></span>
+                        <span>Deportivos</span>
+                    </div>
+                    <div class="leyenda-item">
+                        <span class="leyenda-color graduacion"></span>
+                        <span>Graduaciones</span>
+                    </div>
+                    <div class="leyenda-item">
+                        <span class="leyenda-color taller"></span>
+                        <span>Talleres</span>
+                    </div>
+                    <div class="leyenda-item">
+                        <span class="leyenda-color conferencia"></span>
+                        <span>Conferencias</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter eventos -->
+        <section class="seccion-newsletter-eventos">
+            <div class="contenedor">
+                <div class="newsletter-content">
+                    <div class="newsletter-info">
+                        <h2>¡No te pierdas ningún evento!</h2>
+                        <p>Suscríbete a nuestro boletín y recibe notificaciones sobre todos los eventos, talleres y actividades de CETPRO.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Notificaciones de eventos próximos</li>
+                            <li><i class="fas fa-check"></i> Recordatorios de inscripciones</li>
+                            <li><i class="fas fa-check"></i> Acceso prioritario a talleres</li>
+                            <li><i class="fas fa-check"></i> Contenido exclusivo</li>
+                        </ul>
+                    </div>
+                    <div class="newsletter-form">
+                        <form id="newsletter-eventos-form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Tu nombre completo" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Tu correo electrónico" required>
+                            </div>
+                            <div class="form-group">
+                                <select required>
+                                    <option value="">Selecciona tu interés principal</option>
+                                    <option value="academicos">Eventos académicos</option>
+                                    <option value="culturales">Actividades culturales</option>
+                                    <option value="deportivos">Eventos deportivos</option>
+                                    <option value="talleres">Talleres especializados</option>
+                                    <option value="todos">Todos los eventos</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-bell"></i>
+                                Suscribirme
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="seccion-cta">
+            <div class="contenedor">
+                <div class="cta-content">
+                    <h2>¿Quieres organizar un evento?</h2>
+                    <p>Si tienes una propuesta de evento, taller o actividad, nos encantaría conocerla</p>
+                    <div class="cta-buttons">
+                        <a href="contacto.html" class="btn btn-primary">Proponer Evento</a>
+                        <a href="https://wa.me/51954803212" target="_blank" class="btn btn-secondary">
+                            <i class="fab fa-whatsapp"></i>
+                            Contactar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <div class="columna contacto">
+                <h5>Contacto</h5>
+                <p><i class="fas fa-phone"></i> +51 954 803 212</p>
+                <p><i class="fas fa-envelope"></i> info@cetprojct.edu.pe</p>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Minero N° 500 - Yanacancha - Pasco</p>
+                <div class="enlace-social-pie">
+                    <ul>
+                        <li><a href="https://www.facebook.com/flor.mendozaflor" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@tu-perfil" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                        <li><a href="mailto:info@cetprojct.edu.pe"><i class="fas fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="columna noticias">
+                <h5>Próximos Eventos</h5>
+                <div class="noticia">
+                    <p>Feria Tecnológica CETPRO 2025</p>
+                    <span>Enero 25, 2025</span>
+                </div>
+                <div class="noticia">
+                    <p>Taller de Emprendimiento Digital</p>
+                    <span>Enero 30, 2025</span>
+                </div>
+            </div>
+            <div class="columna enlaces-rapidos">
+                <h5>Enlaces Rápidos</h5>
+                <ul>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="programas.html">Programas</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="ubicacion.html">Ubicación</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pie-inferior">
+            <p>© 2025 CETPRO Arsenio Mendoza Flor | Todos los derechos reservados | <a href="politica-privacidad.html">Política de privacidad</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/eventos.js"></script>
+</body>
+</html>
