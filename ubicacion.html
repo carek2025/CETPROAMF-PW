@@ -28,7 +28,6 @@
             <div class="logo">
                 <a href="index.html"><img src="img/logo-cetprodamf.png" alt="Logo CETPRO Arsenio Mendoza Flor"></a>
             </div>
-            <label for="menu-toggle" class="menu-hamburguesa"><i class="fas fa-bars"></i></label>
             <input type="checkbox" id="menu-toggle">
             <nav class="menu">
                 <ul>
@@ -47,6 +46,7 @@
                     <li><a href="mailto:info@cetprojct.edu.pe"><i class="fas fa-envelope"></i></a></li>
                 </ul>
             </div>
+            <label for="menu-toggle" class="menu-hamburguesa"><i class="fas fa-bars"></i></label>
         </div>
     </header>
 
@@ -70,56 +70,68 @@
         <!-- Mapa principal -->
         <section class="seccion-mapa-principal">
             <div class="mapa-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.9!2d-76.25!3d-10.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDM5JzAwLjAiUyA3NsKwMTUnMDAuMCJX!5e0!3m2!1ses!2spe!4v1642000000000!5m2!1ses!2spe" 
-                    allowfullscreen="" 
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-                <div class="mapa-overlay">
-                    <div class="ubicacion-info-card">
-                        <div class="info-header">
-                            <h3>CETPRO Arsenio Mendoza Flor</h3>
-                            <div class="rating">
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
+                <div class="menu-lateral-sedes">
+                    <h4>Nuestras Sedes</h4>
+                    <ul>
+                        <li><a href="#" class="sede-link active" data-iframe-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d504.5313316258385!2d-76.24513516451646!3d-9.942034954075334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91a7c2e907401529%3A0xaaf4a76f7300175d!2sCETPRO%20Arsenio%20Mendoza%20Flor!5e0!3m2!1ses-419!2spe!4v1757522670966!5m2!1ses-419!2spe" data-sede="sede1">Sede Yanacancha</a></li>
+                        <li><a href="#" class="sede-link" data-iframe-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.9!2d-76.26!3d-10.66!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDM5JzEyLjAiUyA3NsKwMTUnMzYuMCJX!5e0!3m2!1ses!2spe!4v1642000000001!5m2!1ses!2spe" data-sede="sede2">Sede Huánuco Centro</a></li>
+                        <li><a href="#" class="sede-link" data-iframe-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.9!2d-76.24!3d-10.64!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDM4JzQ4LjAiUyA3NsKwMTQnMjQuMCJX!5e0!3m2!1ses!2spe!4v1642000000002!5m2!1ses!2spe" data-sede="sede3">Sede Amarilis</a></li>
+                        <li><a href="#" class="sede-link" data-iframe-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.9!2d-76.27!3d-10.67!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDM5JzI0LjAiUyA3NsKwMTYnMTIuMCJX!5e0!3m2!1ses!2spe!4v1642000000003!5m2!1ses!2spe" data-sede="sede4">Sede Pillco Marca</a></li>
+                    </ul>
+                </div>
+                <div class="mapa-iframe-container">
+                    <iframe 
+                        id="mapa-iframe"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.9!2d-76.25!3d-10.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDM5JzAwLjAiUyA3NsKwMTUnMDAuMCJX!5e0!3m2!1ses!2spe!4v1642000000000!5m2!1ses!2spe" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <div class="mapa-overlay">
+                        <div class="ubicacion-info-card" id="info-card">
+                            <div class="info-header">
+                                <h3>CETPRO Arsenio Mendoza Flor - Sede Yanacancha</h3>
+                                <div class="rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span>4.8 (127 reseñas)</span>
                                 </div>
-                                <span>4.8 (127 reseñas)</span>
                             </div>
-                        </div>
-                        <div class="info-details">
-                            <div class="detail-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Av. Minero N° 500, Yanacancha - Pasco</span>
+                            <div class="info-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Av. Minero N° 500, Yanacancha - Huánuco</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+51 954 803 212</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Lun - Vie: 8:00 AM - 8:00 PM</span>
+                                </div>
                             </div>
-                            <div class="detail-item">
-                                <i class="fas fa-phone"></i>
-                                <span>+51 954 803 212</span>
+                            <div class="info-actions">
+                                <a href="https://goo.gl/maps/ejemplo" target="_blank" class="btn btn-primary">
+                                    <i class="fas fa-directions"></i>
+                                    Cómo llegar
+                                </a>
+                                <a href="tel:+51954803212" class="btn btn-secondary">
+                                    <i class="fas fa-phone"></i>
+                                    Llamar
+                                </a>
                             </div>
-                            <div class="detail-item">
-                                <i class="fas fa-clock"></i>
-                                <span>Lun - Vie: 8:00 AM - 8:00 PM</span>
-                            </div>
-                        </div>
-                        <div class="info-actions">
-                            <a href="https://goo.gl/maps/ejemplo" target="_blank" class="btn btn-primary">
-                                <i class="fas fa-directions"></i>
-                                Cómo llegar
-                            </a>
-                            <a href="tel:+51954803212" class="btn btn-secondary">
-                                <i class="fas fa-phone"></i>
-                                Llamar
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
+        
         <!-- Información de ubicación -->
         <section class="seccion-info-ubicacion">
             <div class="contenedor">
@@ -302,22 +314,7 @@
                         </div>
                     </div>
                     
-                    <div class="transporte-card">
-                        <div class="transporte-icon">
-                            <i class="fas fa-walking"></i>
-                        </div>
-                        <h4>A Pie</h4>
-                        <div class="caminar-info">
-                            <p>Si te encuentras en el centro de Yanacancha, puedes llegar caminando por la Av. Los Mineros.</p>
-                        </div>
-                        <div class="transporte-info">
-                            <span><i class="fas fa-clock"></i> 25-30 min desde Plaza Yanacancha</span>
-                            <span><i class="fas fa-route"></i> 2.2 km de distancia</span>
-                        </div>
-                        <div class="caminar-tips">
-                            <p><i class="fas fa-info-circle"></i> Ruta segura y bien iluminada</p>
-                        </div>
-                    </div>
+                
                 </div>
             </div>
         </section>
@@ -601,5 +598,6 @@
 
     <script src="js/main.js"></script>
     <script src="js/ubicacion.js"></script>
+    <script src="js/mapa.js"></script>
 </body>
 </html>

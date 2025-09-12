@@ -695,7 +695,7 @@
 =========================== */
 .seccion-cta-nosotros {
     padding: 100px 0;
-    background: linear-gradient(135deg, var(--brand-yellow) 0%, var(--dark-yellow) 100%);
+    background: url(../img/banner-3.png) center/cover no-repeat;
     color: white;
     text-align: center;
 }
@@ -720,7 +720,7 @@
 
 .seccion-cta-nosotros .btn-primary {
     background: white;
-    color: var(--brand-yellow);
+    color: #000000;
 }
 
 .seccion-cta-nosotros .btn-secondary {

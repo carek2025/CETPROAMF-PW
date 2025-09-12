@@ -28,7 +28,6 @@
             <div class="logo">
                 <a href="index.html"><img src="img/logo-cetprodamf.png" alt="Logo CETPRO Arsenio Mendoza Flor"></a>
             </div>
-            <label for="menu-toggle" class="menu-hamburguesa"><i class="fas fa-bars"></i></label>
             <input type="checkbox" id="menu-toggle">
             <nav class="menu">
                 <ul>
@@ -47,6 +46,7 @@
                     <li><a href="mailto:info@cetprojct.edu.pe"><i class="fas fa-envelope"></i></a></li>
                 </ul>
             </div>
+            <label for="menu-toggle" class="menu-hamburguesa"><i class="fas fa-bars"></i></label>
         </div>
     </header>
 
@@ -144,13 +144,25 @@
                     
                     <div class="mapa-container">
                         <h3>Nuestra Ubicación</h3>
-                        <div class="mapa-wrapper">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.9!2d-76.25!3d-10.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDM5JzAwLjAiUyA3NsKwMTUnMDAuMCJX!5e0!3m2!1ses!2spe!4v1642000000000!5m2!1ses!2spe" 
-                                allowfullscreen="" 
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
+                        <div class="mapa-content">
+                            <div class="menu-lateral-sedes">
+                                <h4>Nuestras Sedes</h4>
+                                <ul>
+                                    <li><a href="#" class="sede-link active" data-iframe-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.9!2d-76.25!3d-10.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDM5JzAwLjAiUyA3NsKwMTUnMDAuMCJX!5e0!3m2!1ses!2spe!4v1642000000000!5m2!1ses!2spe" data-sede="sede1">Sede Yanacancha</a></li>
+                                    <li><a href="#" class="sede-link" data-iframe-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.9!2d-76.26!3d-10.66!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDM5JzEyLjAiUyA3NsKwMTUnMzYuMCJX!5e0!3m2!1ses!2spe!4v1642000000001!5m2!1ses!2spe" data-sede="sede2">Sede Huánuco Centro</a></li>
+                                    <li><a href="#" class="sede-link" data-iframe-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.9!2d-76.24!3d-10.64!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDM4JzQ4LjAiUyA3NsKwMTQnMjQuMCJX!5e0!3m2!1ses!2spe!4v1642000000002!5m2!1ses!2spe" data-sede="sede3">Sede Amarilis</a></li>
+                                    <li><a href="#" class="sede-link" data-iframe-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.9!2d-76.27!3d-10.67!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDM5JzI0LjAiUyA3NsKwMTYnMTIuMCJX!5e0!3m2!1ses!2spe!4v1642000000003!5m2!1ses!2spe" data-sede="sede4">Sede Pillco Marca</a></li>
+                                </ul>
+                            </div>
+                            <div class="mapa-wrapper">
+                                <iframe 
+                                    id="mapa-iframe"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.9!2d-76.25!3d-10.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDM5JzAwLjAiUyA3NsKwMTUnMDAuMCJX!5e0!3m2!1ses!2spe!4v1642000000000!5m2!1ses!2spe" 
+                                    allowfullscreen="" 
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
                         </div>
                         <div class="mapa-acciones">
                             <a href="https://goo.gl/maps/ejemplo" target="_blank" class="btn btn-secondary">
@@ -175,14 +187,6 @@
                         <button class="tab-btn activo" data-tab="consulta">
                             <i class="fas fa-question-circle"></i>
                             Consulta General
-                        </button>
-                        <button class="tab-btn" data-tab="inscripcion">
-                            <i class="fas fa-user-plus"></i>
-                            Pre-inscripción
-                        </button>
-                        <button class="tab-btn" data-tab="informacion">
-                            <i class="fas fa-info-circle"></i>
-                            Solicitar Información
                         </button>
                     </div>
                     
@@ -563,15 +567,6 @@
                         <p>info@cetprojct.edu.pe</p>
                         <span>Respuesta en<br>máximo 2 horas</span>
                     </a>
-                    
-                    <a href="ubicacion.html" class="contacto-rapido-item">
-                        <div class="contacto-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h4>Visítanos</h4>
-                        <p>Av. Minero N° 500</p>
-                        <span>Yanacancha - Pasco<br>Ver cómo llegar</span>
-                    </a>
                 </div>
             </div>
         </section>
@@ -649,5 +644,7 @@
 
     <script src="js/main.js"></script>
     <script src="js/contacto.js"></script>
+    <script src="js/mapa.js"></script>
+
 </body>
 </html>

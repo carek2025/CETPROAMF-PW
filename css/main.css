@@ -12,8 +12,8 @@
     --text-secondary: #666666;
     --text-muted: #777777;
     --border-color: #E5E5E5;
-    --card-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    --card-shadow-hover: 0 15px 35px rgba(0,0,0,0.15);
+    --card-shadow: 0 9px 35px rgba(0, 0, 0, 0.24);
+    --card-shadow-hover: 0 10px 25px rgba(0,0,0,0.15);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --border-radius: 12px;
     --max-width: 1200px;
@@ -125,12 +125,15 @@ p {
     align-items: center;
     width: 100%;
     max-width: var(--max-width);
+    text-align: center;
 }
 
 .nav-secundario-izquierda {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 20px;
+    text-align: center;
+    justify-content: center;
 }
 
 .nav-secundario-izquierda a,
@@ -162,7 +165,7 @@ p {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     position: fixed;
-    top: 40px;
+    top: 0px;
     width: 100%;
     z-index: 1000;
     transition: var(--transition);
@@ -176,6 +179,9 @@ p {
     padding: 15px 20px;
 }
 
+.cabecera .logo {
+    margin-right:80px ;
+}
 .cabecera .logo img {
     max-height: 50px;
     width: auto;
@@ -184,7 +190,7 @@ p {
 .cabecera .menu ul {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 25px;
     align-items: center;
 }
 
@@ -220,10 +226,13 @@ p {
     color: var(--brand-yellow);
 }
 
+.enlace-social-cabecera {
+    margin-left: 10px;
+}
 .enlace-social-cabecera ul {
     display: flex;
     list-style: none;
-    gap: 15px;
+    gap: 4px;
 }
 
 .enlace-social-cabecera a {
@@ -233,7 +242,7 @@ p {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: var(--bg-secondary);
+    background: #cac4c4;
     color: var(--text-secondary);
     font-size: 18px;
     transition: var(--transition);
@@ -262,7 +271,7 @@ input[type="checkbox"] {
 =========================== */
 .hero-banner {
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--brand-yellow) 0%, var(--dark-yellow) 100%);
+    background: linear-gradient(135deg,#ECE267 0%, transparent 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -279,10 +288,10 @@ input[type="checkbox"] {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../img/banner-hero.jpg');
+    background-image: url('../img/banner-2.png');
     background-size: cover;
     background-position: center;
-    opacity: 0.2;
+    opacity: 1;
     z-index: 0;
 }
 
@@ -292,7 +301,7 @@ input[type="checkbox"] {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(239, 187, 32, 0.9) 0%, rgba(212, 160, 23, 0.9) 100%);
+    background: linear-gradient(135deg,#ECE267 0%, transparent 100%);
     z-index: 1;
 }
 
@@ -649,6 +658,11 @@ input[type="checkbox"] {
     transition: var(--transition);
     filter: grayscale(100%);
 }
+.logo-dre{
+    padding-left: 0;
+    padding-right: 0;
+
+}
 
 .colaborador-logo:hover {
     filter: grayscale(0%);
@@ -656,11 +670,15 @@ input[type="checkbox"] {
 }
 
 .colaborador-logo img {
-    max-width: 120px;
-    max-height: 60px;
+    max-width: 160px;
+    max-height: 100px;
     object-fit: contain;
 }
-
+.logo-dre img {
+    max-width: 210px;
+    max-height: 300px;
+    object-fit: cover;
+}
 /* =========================== 
    EVENTOS RECIENTES 
 =========================== */
@@ -834,10 +852,26 @@ input[type="checkbox"] {
    CTA FINAL 
 =========================== */
 .seccion-cta {
+    position: relative;
     padding: 100px 0;
-    background: linear-gradient(135deg, var(--brand-yellow) 0%, var(--dark-yellow) 100%);
+    background: url(../img/banner-3.png) center/cover no-repeat;
     color: white;
     text-align: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.seccion-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6); /* 🔹 Overlay negro */
+    z-index: 0;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1; /* 🔹 Poner el texto por encima del overlay */
 }
 
 .cta-content h2 {
@@ -860,13 +894,23 @@ input[type="checkbox"] {
 
 .cta-buttons .btn-primary {
     background: white;
-    color: var(--brand-yellow);
+    color: #000000;
+}
+
+.cta-buttons .btn-primary:hover {
+    background: var(--brand-yellow);
+    color: white;
 }
 
 .cta-buttons .btn-secondary {
     background: transparent;
     color: white;
     border: 2px solid white;
+}
+
+.cta-buttons .btn-secondary:hover {
+    background: white;
+    color: var(--brand-yellow);
 }
 
 /* =========================== 
@@ -1026,9 +1070,9 @@ input[type="checkbox"] {
 /* =========================== 
    RESPONSIVE DESIGN 
 =========================== */
-@media (max-width: 1024px) {
+@media (max-width: 1095px) {
     .cabecera .menu ul {
-        gap: 20px;
+        gap: 15px;
     }
     
     .ubicacion-content {
@@ -1037,21 +1081,21 @@ input[type="checkbox"] {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1029px) {
     .nav-secundario {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
         padding: 10px;
     }
     
     .nav-secundario-izquierda {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
         text-align: center;
     }
     
     .cabecera {
-        top: 60px;
+        top: 0;
     }
     
     .cabecera .contenedor {
@@ -1075,10 +1119,10 @@ input[type="checkbox"] {
         gap: 15px;
     }
     
-    #menu-toggle:checked + .menu ul {
+    #menu-toggle:checked ~ .menu ul {
         display: flex;
     }
-    
+
     .hero-banner {
         min-height: 80vh;
     }
@@ -1113,6 +1157,14 @@ input[type="checkbox"] {
     
     .cta-buttons .btn {
         width: 250px;
+    }
+    .enlace-social-cabecera{
+        display: none;
+    }
+}
+@media (max-width: 675px) {
+    .nav-secundario{
+        display: none;
     }
 }
 

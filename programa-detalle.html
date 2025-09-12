@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Detalle de Programa — CETPRO Arsenio Mendoza Flor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/programas.css">
+
+    <!-- Estilos específicos de la página de detalle (prefijo pd- para evitar colisiones) -->
+    <style>
+        .pd-detalle-grid {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 40px;
+            align-items: start;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 1029px) {
+            .pd-detalle-grid { grid-template-columns: 1fr; }
+        }
+
+        .pd-imagen-salon {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .pd-meta-rapida {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 18px 0;
+        }
+
+        .pd-chip {
+            background: var(--bg-secondary);
+            padding: 10px 14px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            font-weight: 600;
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        /* Sidebar profesores */
+        .pd-sidebar {
+            position: sticky;
+            top: 120px;
+        }
+
+        .pd-teacher-card {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            padding: 12px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .pd-teacher-card img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--brand-yellow);
+        }
+
+        .pd-teacher-info h4 { margin: 0 0 4px 0; font-size: 1rem; }
+        .pd-teacher-info p { margin: 0; font-size: 0.85rem; color: var(--text-muted); }
+
+        /* Módulos grid */
+        .pd-modulos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .pd-modulo-card {
+            background: white;
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .pd-modulo-thumb {
+            width: 64px;
+            height: 64px;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .pd-modulo-meta { font-size: 0.9rem; color: var(--text-muted); margin-top: 8px; }
+
+        /* Accordion simple */
+        .pd-accordion { margin-top: 18px; }
+        .pd-accordion button {
+            width: 100%;
+            text-align: left;
+            padding: 12px 16px;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .pd-accordion .pd-panel { max-height: 0; overflow: hidden; transition: max-height 0.32s ease; }
+        .pd-accordion .pd-panel.open { max-height: 1000px; padding: 12px 16px; }
+
+        .pd-acciones-top { display:flex; gap:12px; margin-top:12px; }
+
+        /* Small helpers */
+        .text-muted { color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <!-- Reutiliza tu header (se asume que main.css ya lo controla) -->
+    <header class="cabecera">
+        <div class="nav-secundario">
+            <div class="nav-secundario-izquierda">
+                <a href="index.html#preguntas-frecuentes"><i class="fa-solid fa-circle-question"></i>Preguntas Frecuentes</a>
+                <p><i class="fa-solid fa-envelope"></i>soporte@cetprodamf.edu.pe</p>
+            </div>
+            <div class="nav-secundario-derecha">
+                <ul>
+                    <li><a href="inicio-sesion.html">Iniciar sesión</a></li>
+                    <li><a href="registro.html">Registrarse</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="contenedor">
+            <div class="logo"><a href="index.html"><img src="img/logo-cetprodamf.png" alt="Logo"></a></div>
+            <input type="checkbox" id="menu-toggle">
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="programas.html" class="activo">Programas de Estudios</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="ubicacion.html">Ubicación</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <label for="menu-toggle" class="menu-hamburguesa"><i class="fas fa-bars"></i></label>
+
+        </div>
+    </header>
+
+    <main class="contenedor" style="margin-top: 140px;">
+        <!-- Breadcrumb + título -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Inicio</a> <span>/</span>
+            <a href="programas.html">Programas</a> <span>/</span>
+            <span id="pd-breadcrumb-current">Detalle</span>
+        </nav>
+
+        <section class="pd-detalle" aria-labelledby="pd-title">
+            <div class="pd-detalle-grid">
+                <!-- Contenido principal -->
+                <article>
+                    <header>
+                        <h1 id="pd-title">Título del Programa</h1>
+                        <p id="pd-subtitle" class="text-muted">Subtítulo o tagline del programa</p>
+
+                        <div class="pd-acciones-top">
+                            <a id="pd-inscribirme" class="btn btn-primary" href="#">Inscribirme</a>
+                            <button id="pd-fav" class="btn btn-secondary" aria-pressed="false"><i class="far fa-heart"></i> Favorito</button>
+                            <button id="pd-share" class="btn btn-secondary" aria-label="Compartir"><i class="fas fa-share-alt"></i> Compartir</button>
+                        </div>
+
+                        <div class="pd-meta-rapida" aria-hidden="true">
+                            <span class="pd-chip"><i class="fas fa-certificate"></i> <strong id="pd-creditos">40</strong> créditos</span>
+                            <span class="pd-chip"><i class="fas fa-clock"></i> <strong id="pd-duracion">6 meses</strong></span>
+                            <span class="pd-chip"><i class="fas fa-calendar-alt"></i> <strong id="pd-fecha-inicio">01 Feb 2025</strong> — <strong id="pd-fecha-fin">01 Jul 2025</strong></span>
+                            <span class="pd-chip"><i class="fas fa-door-open"></i> Salón: <span id="pd-salon">Taller 2</span></span>
+                        </div>
+
+                    </header>
+
+                    <figure>
+                        <img id="pd-imagen-salon" class="pd-imagen-salon" src="img/default-salon.jpg" alt="Salón de formación" loading="lazy">
+                    </figure>
+
+                    <section id="pd-descripcion" class="seccion-header" style="margin-top:18px;">
+                        <h2>Descripción</h2>
+                        <p class="text-secondary" id="pd-desc-text">Descripción extensa del programa. Aquí se explica el enfoque, competencias a desarrollar y salida laboral.</p>
+                    </section>
+
+                    <section id="pd-temario" style="margin-top:18px;">
+                        <h2>Temario y Unidades</h2>
+                        <p class="text-muted">A continuación verás los módulos y unidades didácticas con sus horas, créditos y una breve descripción.</p>
+
+                        <!-- Módulos en tarjeta -->
+                        <div class="pd-modulos-grid" id="pd-modulos-grid">
+                            <!-- Cada .pd-modulo-card se generará por JS -->
+                        </div>
+
+                        <!-- Accordion con más detalle por módulo (opcional) -->
+                        <div class="pd-accordion" id="pd-accordion"></div>
+                    </section>
+
+                    <section id="pd-documents" style="margin-top:28px;">
+                        <h2>Materiales y descargas</h2>
+                        <ul id="pd-downloads">
+                            <!-- links a PDFs -->
+                        </ul>
+                    </section>
+                </article>
+
+                <!-- Sidebar: Profesores y datos rápidos -->
+                <aside class="pd-sidebar" aria-labelledby="pd-side-title">
+                    <div style="background: transparent;">
+                        <h3 id="pd-side-title">Docentes del Programa</h3>
+                        <div id="pd-teachers-list">
+                            <!-- tarjetas de docente generadas por JS -->
+                        </div>
+
+                        <div style="height:18px"></div>
+
+                        <div class="card-institucional" style="padding:16px;">
+                            <h4>Información rápida</h4>
+                            <p class="text-muted">Créditos necesarios: <strong id="pd-creditos-aside">40</strong></p>
+                            <p class="text-muted">Duración: <strong id="pd-duracion-aside">6 meses</strong></p>
+                            <p class="text-muted">Vacantes: <strong id="pd-vacantes">25</strong></p>
+                            <a id="pd-contacto" class="btn btn-primary" href="contacto.html">Solicitar Información</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina" style="margin-top:40px;">
+        <!-- reuse footer from main site -->
+        <div class="contenedor">
+            <div class="columna contacto">
+                <h5>Contacto</h5>
+                <p><i class="fas fa-phone"></i> +51 954 803 212</p>
+                <p><i class="fas fa-envelope"></i> info@cetprojct.edu.pe</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para poblar la plantilla con datos (ejemplo local). Reemplazar por llamadas a API o plantillas del backend. -->
+    <script>
+        // Helper: parse query string
+        function getQueryParams() {
+            const params = {};
+            location.search.replace(/^[?]/, '').split('&').forEach(pair => {
+                if (!pair) return;
+                const [k, v] = pair.split('=');
+                params[decodeURIComponent(k)] = decodeURIComponent(v || '');
+            });
+            return params;
+        }
+
+        // Datos de ejemplo (puedes mover esto a un JSON externo o a tu backend)
+        const PROGRAM_DATA = {
+            1: {
+                id:1,
+                nombre: 'Soporte Técnico y Operaciones de Centros de Cómputo',
+                subtitle: 'Mantenimiento y soporte de sistemas computacionales',
+                creditos: 40,
+                duracion: '6 meses',
+                fechaInicio: '2025-02-01',
+                fechaFin: '2025-07-01',
+                salonImg: 'img/tres-personas-los-examinadores-de-poligrafo-trabajan-en-la-oficina-con-el-equipo-de-su-detector-de-mentiras.jpg',
+                salon: 'Taller informática 1',
+                vacantes: 25,
+                horario: 'Lun a Vie — 3:00 PM - 7:45 PM',
+                descripcion: 'Formate como especialista en mantenimiento, reparación y soporte técnico de sistemas computacionales. Aprende a diagnosticar problemas, instalar software y brindar asistencia técnica profesional.',
+                teachers: [
+                    {name: 'Percy Bustamante Zevallos', cargo: 'Docente Titular', formacion: 'Ingeniero de Sistemas, Técnico en Redes', photo: 'img/teacher-percy.jpg'},
+                    {name: 'María López', cargo: 'Docente de Hardware', formacion: 'Técnica en Electrónica', photo: 'img/teacher-maria.jpg'}
+                ],
+                modulos: [
+                    {id: 'M1', titulo: 'Módulo 1: Fundamentos de Hardware', descripcion: 'Conocerás componentes de PC, diagnóstico y reparación básica.', horas: 60, creditos: 8, img: 'img/mod-hardware.jpg'},
+                    {id: 'M2', titulo: 'Módulo 2: Sistemas Operativos', descripcion: 'Instalación, configuración y administración de SO Windows y Linux.', horas: 80, creditos: 10, img: 'img/mod-so.jpg'},
+                    {id: 'M3', titulo: 'Módulo 3: Redes y Conectividad', descripcion: 'Diseño y solución de problemas en redes locales.', horas: 60, creditos: 8, img: 'img/mod-redes.jpg'}
+                ],
+                downloads: [ {title:'Ficha del programa (PDF)', url:'docs/ficha-programa-1.pdf'} ]
+            },
+            // Aquí puedes copiar/pegar más programas según tu listado...
+        };
+
+        // Inicializar la vista
+        (function init() {
+            const params = getQueryParams();
+            const id = params.id || '1';
+            const data = PROGRAM_DATA[id] || PROGRAM_DATA[1];
+
+            // Título y meta
+            document.getElementById('pd-title').textContent = data.nombre;
+            document.getElementById('pd-subtitle').textContent = data.subtitle || '';
+            document.getElementById('pd-breadcrumb-current').textContent = data.nombre;
+
+            // Metadatos rápidos
+            document.getElementById('pd-creditos').textContent = data.creditos;
+            document.getElementById('pd-duracion').textContent = data.duracion;
+            document.getElementById('pd-fecha-inicio').textContent = formatDate(data.fechaInicio);
+            document.getElementById('pd-fecha-fin').textContent = formatDate(data.fechaFin);
+            document.getElementById('pd-salon').textContent = data.salon;
+            document.getElementById('pd-desc-text').textContent = data.descripcion;
+            document.getElementById('pd-imagen-salon').src = data.salonImg || 'img/default-salon.jpg';
+            document.getElementById('pd-creditos-aside').textContent = data.creditos;
+            document.getElementById('pd-duracion-aside').textContent = data.duracion;
+            document.getElementById('pd-vacantes').textContent = data.vacantes || '-';
+
+            // Teachers
+            const tlist = document.getElementById('pd-teachers-list');
+            tlist.innerHTML = '';
+            data.teachers.forEach(t => {
+                const div = document.createElement('div');
+                div.className = 'pd-teacher-card';
+                div.innerHTML = `
+                    <img src="${t.photo || 'img/default-teacher.jpg'}" alt="Foto ${t.name}" loading="lazy">
+                    <div class="pd-teacher-info">
+                        <h4>${t.name}</h4>
+                        <p>${t.cargo}</p>
+                        <p class="text-muted" style="font-size:0.82rem">${t.formacion}</p>
+                    </div>
+                `;
+                tlist.appendChild(div);
+            });
+
+            // Modulos grid
+            const mg = document.getElementById('pd-modulos-grid');
+            mg.innerHTML = '';
+            data.modulos.forEach(mod => {
+                const card = document.createElement('article');
+                card.className = 'pd-modulo-card';
+                card.innerHTML = `
+                    <img class="pd-modulo-thumb" src="${mod.img || 'img/default-thumb.jpg'}" alt="${mod.titulo}" loading="lazy">
+                    <div>
+                        <h4 style="margin:0">${mod.titulo}</h4>
+                        <p class="text-muted" style="margin:6px 0 0;">${truncate(mod.descripcion, 130)}</p>
+                        <div class="pd-modulo-meta">Horas: <strong>${mod.horas}</strong> • Créditos: <strong>${mod.creditos}</strong></div>
+                    </div>
+                `;
+                mg.appendChild(card);
+            });
+
+            // Accordion
+            const acc = document.getElementById('pd-accordion');
+            acc.innerHTML = '';
+            data.modulos.forEach((mod, idx) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.innerHTML = `<span>${mod.titulo}</span><i class="fas fa-chevron-down"></i>`;
+                const panel = document.createElement('div');
+                panel.className = 'pd-panel';
+                panel.innerHTML = `
+                    <p>${mod.descripcion}</p>
+                    <p class="text-muted">Horas: ${mod.horas} • Créditos: ${mod.creditos}</p>
+                `;
+                btn.addEventListener('click', () => {
+                    const isOpen = panel.classList.contains('open');
+                    document.querySelectorAll('.pd-accordion .pd-panel').forEach(p => p.classList.remove('open'));
+                    if (!isOpen) panel.classList.add('open');
+                });
+                acc.appendChild(btn);
+                acc.appendChild(panel);
+            });
+
+            // Downloads
+            const dl = document.getElementById('pd-downloads');
+            dl.innerHTML = '';
+            (data.downloads||[]).forEach(d => {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="${d.url}" target="_blank" rel="noopener">${d.title}</a>`;
+                dl.appendChild(li);
+            });
+
+            // Inscribirme link (puedes construir con id)
+            document.getElementById('pd-inscribirme').href = `inscripcion-preliminar.html?program=${data.id}`;
+
+            // JSON-LD schema.org Course
+            injectSchema(data);
+        })();
+
+        function formatDate(d) {
+            if (!d) return '';
+            const dt = new Date(d);
+            const opts = { day: '2-digit', month: 'short', year: 'numeric' };
+            return dt.toLocaleDateString('es-PE', opts);
+        }
+
+        function truncate(s, n) { return s.length>n? s.slice(0,n-1)+'…': s }
+
+        // Favorito simple
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('#pd-fav')) {
+                const btn = e.target.closest('#pd-fav');
+                const pressed = btn.getAttribute('aria-pressed') === 'true';
+                btn.setAttribute('aria-pressed', String(!pressed));
+                btn.classList.toggle('active');
+                btn.querySelector('i').classList.toggle('fas');
+                btn.querySelector('i').classList.toggle('far');
+            }
+            if (e.target.closest('#pd-share')) {
+                const url = location.href;
+                if (navigator.share) {
+                    navigator.share({ title: document.getElementById('pd-title').textContent, url }).catch(()=>{});
+                } else {
+                    prompt('Copiar enlace del programa:', url);
+                }
+            }
+        });
+
+        // Inyecta JSON-LD
+        function injectSchema(data) {
+            const schema = {
+                "@context": "https://schema.org",
+                "@type": "Course",
+                "name": data.nombre,
+                "description": data.descripcion,
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "CETPRO Arsenio Mendoza Flor",
+                    "sameAs": window.location.origin
+                },
+                "hasCourseInstance": {
+                    "@type": "CourseInstance",
+                    "startDate": data.fechaInicio,
+                    "endDate": data.fechaFin,
+                    "instructor": data.teachers.map(t=> ({"@type":"Person","name":t.name}))
+                }
+            };
+            const s = document.createElement('script');
+            s.type = 'application/ld+json';
+            s.text = JSON.stringify(schema);
+            document.head.appendChild(s);
+        }
+    </script>
+</body>
+</html>
