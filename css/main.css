@@ -854,7 +854,7 @@ input[type="checkbox"] {
 .seccion-cta {
     position: relative;
     padding: 100px 0;
-    background: url(../img/banner-3.png) center/cover no-repeat;
+    background: url(../img/banner/cetpro-convenios.png) center/cover no-repeat;
     color: white;
     text-align: center;
     z-index: 1;

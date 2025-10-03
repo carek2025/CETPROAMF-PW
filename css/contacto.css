@@ -400,10 +400,8 @@
     font-size: 0.95rem;
     line-height: 1.5;
     margin-bottom: 10px;
-}
+    display: inline-block;
 
-.checkbox-label input[type="checkbox"] {
-    display: none;
 }
 
 .checkmark {
@@ -417,6 +415,7 @@
     transition: var(--transition);
     flex-shrink: 0;
     margin-top: 2px;
+    display: inline-block;
 }
 
 .checkbox-label input[type="checkbox"]:checked + .checkmark {
@@ -732,4 +731,24 @@
     .mapa-wrapper {
         height: 250px;
     }
+}
+.form-message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+.form-message.success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+.form-message.error {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+.form-message ul {
+    margin: 10px 0 0 20px;
+    padding: 0;
 }

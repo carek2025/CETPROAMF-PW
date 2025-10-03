@@ -141,3 +141,20 @@ INSERT INTO galeria (sede_id, titulo, descripcion, imagen) VALUES
 (4, 'Taller de agroindustria', 'Espacio para prácticas agroindustriales.', 'img/sede4_taller.jpg'),
 (4, 'Laboratorio de química', 'Ambiente equipado para experimentos.', 'img/sede4_lab.jpg'),
 (4, 'Sala de usos múltiples', 'Ambiente para conferencias y eventos.', 'img/sede4_sala.jpg');
+
+
+-- Tabla para almacenar los envíos del formulario de contacto general
+CREATE TABLE IF NOT EXISTS consultas_contacto (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  sede_id INT NULL,
+  nombre VARCHAR(100) NOT NULL,
+  apellidos VARCHAR(100) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  telefono VARCHAR(50) DEFAULT NULL,
+  asunto VARCHAR(255) NOT NULL,
+  mensaje TEXT NOT NULL,
+  acepto_terminos TINYINT(1) NOT NULL DEFAULT 0,
+  fecha_envio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  leido TINYINT(1) NOT NULL DEFAULT 0,
+  FOREIGN KEY (sede_id) REFERENCES sedes(id) ON DELETE SET NULL
+) ENGINE=InnoDB CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
