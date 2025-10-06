@@ -14,8 +14,7 @@
 
     /* Banner de página */
     .page-banner {
-        min-height: 100vh;
-        background: linear-gradient(135deg,#ECE267 0%, transparent 100%);
+        min-height: 50vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -33,7 +32,7 @@
         height: 100%;
         background-image: url('../img/banner-2.png');
         background-size: cover;
-        background-position: center;
+        background-position: top;
         opacity: 1;
         z-index: 0;
     }
@@ -43,13 +42,51 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg,#ECE267 0%, transparent 100%);
+        background: linear-gradient(135deg,hsl(223, 33%, 45%) 0%, transparent 100%);
         z-index: 1;
     }
-    .page-banner-content { position:relative; z-index:2; max-width: 600px; }
-    .breadcrumb { display:flex; justify-content:center; align-items:center; gap:10px; font-size:1rem; opacity:.9 }
-    .breadcrumb a { color:#fff }
+    .page-banner-content { 
+        position: relative;
+        z-index: 2;
+        max-width: 600px;
+        right: 310px;
+        top: 50px;
+     }
+     .page-banner-content  h1{ 
+        font-size: clamp(2.2rem, 4vw, 2rem);
+        margin-bottom: 20px;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        color: #D4A017;
+     }
+    .page-banner-content  p{ 
+        font-size: clamp(0.8rem, 1.4vw, 1.0rem);
+        margin-bottom: 40px;
+        opacity: 0.95;
+        color: white;
+     }
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
+.hero-buttons .btn-primary {
+    background: #D4A017;
+    color: #f0eaea;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hero-buttons .btn-secondary {
+    background: #E5E5E5;
+    color: #D4A017;
+    border: 2px solid #D4A017;
+}
+
+.hero-buttons .btn:hover {
+    transform: translateY(-3px) scale(1.05);
+}
     /* Filtros y búsqueda */
     .seccion-filtros-eventos { padding:40px 0; background:var(--bg-secondary); border-bottom:1px solid var(--border-color) }
     .filtros-container { display:flex; justify-content:space-between; align-items:center; gap:30px; flex-wrap:wrap }

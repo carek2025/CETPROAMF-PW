@@ -39,7 +39,7 @@
                     <li><a href="programas.html">Programas de Estudios</a></li>
                     <li><a href="eventos.php" class="activo">Eventos</a></li>
                     <li><a href="ubicacion.php">Ubicación</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
                 </ul>
             </nav>
             <div class="enlace-social-cabecera">
@@ -62,11 +62,10 @@
                 <div class="page-banner-content">
                     <h1>Eventos y Actividades</h1>
                     <p>Mantente al día con todas nuestras actividades académicas, culturales y de vinculación</p>
-                    <nav class="breadcrumb">
-                        <a href="index.html">Inicio</a>
-                        <span>/</span>
-                        <span>Eventos</span>
-                    </nav>
+                    <div class="hero-buttons">
+                        <a href="index.html" class="btn btn-primary">Inicio</a>
+                        <a href="contacto.php" class="btn btn-secondary">Contáctanos</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -222,7 +221,7 @@
                     <h2>¿Quieres organizar un evento?</h2>
                     <p>Si tienes una propuesta de evento, taller o actividad, nos encantaría conocerla</p>
                     <div class="cta-buttons">
-                        <a href="contacto.html" class="btn btn-primary">Proponer Evento</a>
+                        <a href="contacto.php" class="btn btn-primary">Proponer Evento</a>
                         <a href="https://wa.me/51954803212" target="_blank" class="btn btn-secondary">
                             <i class="fab fa-whatsapp"></i>
                             Contactar por WhatsApp
@@ -267,7 +266,7 @@
                     <li><a href="programas.html">Programas</a></li>
                     <li><a href="eventos.php">Eventos</a></li>
                     <li><a href="ubicacion.html">Ubicación</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
                 </ul>
             </div>
         </div>
@@ -320,7 +319,61 @@
         comentarios: 20,
         imagen: "img/image.png", // ← antes: "/imagenes/imagen3.jpg"
         categoria: "graduaciones"
-      }
+      },
+       {
+        titulo: "Firma del convenio entre el Colegio Hermilio Valdizan",
+        descripcion: "Doble certificacion a traves de la convalidacion .",
+        fechaTexto: "Sep 22 2025",
+        autor: "Invitado Especial",
+        comentarios: 34,
+        imagen: "img/administracion-2.png", // ← antes: "/imagenes/imagen4.jpg"
+        categoria: "convenios"
+      },
+      {
+        titulo: "Certamen de belleza Flor de primavera 2025",
+        descripcion: "Certamen",
+        fechaTexto: "Setiembre 16 2025",
+        autor: "Coordinación Académica",
+        comentarios: 20,
+        imagen: "img/image.png", // ← antes: "/imagenes/imagen5.jpg"
+        categoria: "Eventos"
+      },
+       {
+        titulo: "Formacion Tecnica que impulsa sueños y genera oportunidades",
+        descripcion: "Brindar Cursos Tecnicos.",
+        fechaTexto: "Agosto 27 2025",
+        autor: "Invitado Especial",
+        comentarios: 34,
+        imagen: "img/administracion-2.png", // ← antes: "/imagenes/imagen6.jpg"
+        categoria: "conferencias"
+      },
+      {
+        titulo: "Apertura Sub-Sede",
+        descripcion: "Aprertura de nueva Sub-Sede",
+        fechaTexto: "Agosto 27 2025",
+        autor: "Coordinación Académica",
+        comentarios: 20,
+        imagen: "img/image.png", // ← antes: "/imagenes/imagen8.jpg"
+        categoria: "Eventos"
+      },
+      {
+        titulo: "Reconocimiento para BecaTec 2025 del Pronabec",
+        descripcion: "Beca para estudiar de manera gratuita.",
+        fechaTexto: "Agosto 13  2025",
+        autor: "Invitado Especial",
+        comentarios: 34,
+        imagen: "img/administracion-2.png", // ← antes: "/imagenes/imagen9.jpg"
+        categoria: "conferencias"
+      },
+      {
+        titulo: "Dia del Logro",
+        descripcion: "Celebracion del dia del Logro",
+        fechaTexto: "Julio 25  2025",
+        autor: "Coordinación Académica",
+        comentarios: 20,
+        imagen: "img/image.png", // ← antes: "/imagenes/imagen10.jpg"
+        categoria: "Eventos"
+      },
     ];
 
     // ELEMENTOS DEL DOM

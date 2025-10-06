@@ -99,11 +99,11 @@ function e($str) {
                 <div class="page-banner-content">
                     <h1>Contacto</h1>
                     <p>Estamos aquí para resolver todas tus dudas sobre nuestra sede <?= e($sede['nombre']) ?></p>
-                    <nav class="breadcrumb">
-                        <a href="index.html">Inicio</a>
-                        <span>/</span>
-                        <span>Contacto</span>
-                    </nav>
+                    <div class="hero-buttons">
+                        <a href="index.html" class="btn btn-primary">Inicio</a>
+                        <a href="programas.html" class="btn btn-secondary">Explorar Programas</a>
+                    </div>
+
                 </div>
             </div>
         </section>

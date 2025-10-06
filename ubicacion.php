@@ -97,7 +97,7 @@ function e($str) {
                     <li><a href="programas.html">Programas de Estudios</a></li>
                     <li><a href="eventos.php">Eventos</a></li>
                     <li><a href="ubicacion.php" class="activo">Ubicación</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
                 </ul>
             </nav>
             <div class="enlace-social-cabecera">
@@ -507,7 +507,7 @@ function e($str) {
                             <i class="fas fa-directions"></i>
                             Cómo llegar
                         </a>
-                        <a href="contacto.html" class="btn btn-secondary">
+                        <a href="contacto.php" class="btn btn-secondary">
                             <i class="fas fa-calendar"></i>
                             Agendar visita
                         </a>
@@ -548,7 +548,7 @@ function e($str) {
                     <li><a href="programas.html">Programas</a></li>
                     <li><a href="eventos.php">Eventos</a></li>
                     <li><a href="ubicacion.php">Ubicación</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
                 </ul>
             </div>
         </div>
