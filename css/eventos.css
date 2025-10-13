@@ -14,7 +14,7 @@
 
     /* Banner de página */
     .page-banner {
-        min-height: 50vh;
+        min-height: 65vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -42,7 +42,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg,hsl(223, 33%, 45%) 0%, transparent 100%);
+        background: linear-gradient(135deg,#a83121 0%, transparent 100%);
         z-index: 1;
     }
     .page-banner-content { 
@@ -103,7 +103,15 @@
     .vista-btn:hover,.vista-btn.activo{background:var(--brand-yellow);color:#fff;border-color:var(--brand-yellow)}
 
     /* Destacados → HERO */
-    .seccion-eventos-destacados{padding:80px 0}
+    .seccion-eventos-destacados{padding:80px 0;
+    background-color: #a83121dd;
+    }
+     .seccion-eventos-destacados h2{
+    color: var(--brand-yellow);
+    }
+    .seccion-eventos-destacados p{
+    color: var(--bg-primary);
+    }
     .hero-wrap{position:relative; overflow:hidden; border-radius:var(--border-radius); border-bottom:1px solid var(--border-color); background:#fff; box-shadow:var(--card-shadow)}
     .hero{display:flex; width:100%; transition:transform .6s ease; will-change:transform}
     .slide{flex:0 0 100%; position:relative; height:520px; display:flex; align-items:flex-end; color:#fff}
@@ -148,7 +156,15 @@
     .pag-numero:hover,.pag-numero.activo{background:var(--brand-yellow); color:#fff; border-color:var(--brand-yellow)}
 
     /* Calendario */
-    .seccion-calendario{padding:80px 0}
+    .seccion-calendario{padding:80px 0;
+        background-color: #a83121dd;
+    }
+    .seccion-calendario h2{
+        color: var(--brand-yellow);
+    }
+    .seccion-calendario p{
+        color: var(--bg-primary);
+    }
     .calendario-container{background:#fff;border-radius:var(--border-radius);box-shadow:var(--card-shadow);overflow:hidden;margin-top:60px}
     .calendario-header{display:flex;justify-content:space-between;align-items:center;padding:30px;background:var(--bg-secondary);border-bottom:1px solid var(--border-color)}
     .calendario-nav{width:40px;height:40px;background:var(--brand-yellow);color:#fff;border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:var(--transition)}
@@ -194,6 +210,38 @@
     .newsletter-form .btn:hover{background:rgba(255,255,255,.9); transform:translateY(-2px)}
 
     /* CTA + Footer */
-    .seccion-cta-2{padding:80px 0}
-    .cta-content-2{background:#fff; border:1px solid var(--border-color); border-radius:var(--border-radius); box-shadow:var(--card-shadow); padding:28px; display:grid; gap:14px; justify-items:center; text-align:center}
+.seccion-cta-2{
+    position: relative;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+    padding:80px 0
+}
+.seccion-cta-2::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6); /* 🔹 Overlay negro */
+    z-index: 0;
+}
+.cta-content-2{
+    background:#fff;
+    border:1px solid var(--border-color);
+    border-radius:var(--border-radius);
+    box-shadow:var(--card-shadow);
+    padding:28px;
+    display:grid; gap:14px;
+    justify-items:center;
+    text-align:center;
+    position: relative;
+    z-index: 1; /* 🔹 Poner el texto por encima del overlay */
+}
+.cta-content-2 .btn-secondary{
+    background-color: #a83121;
+}
+.cta-content-2 .btn-secondary:hover{
+    background-color: #27ae60;
+    color: #E5E5E5;
+}
     @media(max-width:900px){ .newsletter-content{grid-template-columns:1fr} .pie-pagina .contenedor{grid-template-columns:1fr} }

@@ -1,9 +1,14 @@
+body{
+    background-color: #a83121dd;
+}
 .pd-detalle-grid {
     display: grid;
     grid-template-columns: 1fr 340px;
     gap: 40px;
     align-items: start;
     margin-top: 40px;
+    background-color: #a83121dd;
+
 }
 @media (max-width: 1029px) {
     .pd-detalle-grid { grid-template-columns: 1fr; }

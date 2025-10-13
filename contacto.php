@@ -57,7 +57,7 @@ function e($str) {
         <div class="nav-secundario">
             <div class="nav-secundario-izquierda">
                 <a href="index.html#preguntas-frecuentes"><i class="fa-solid fa-circle-question"></i>Preguntas Frecuentes</a>
-                <p><i class="fa-solid fa-envelope"></i>soporte@cetprodamf.edu.pe</p>
+                <p><i class="fa-solid fa-envelope"></i>cetproamf2021@gmail.com</p>
             </div>
             <div class="nav-secundario-derecha">
                 <ul>
@@ -85,7 +85,7 @@ function e($str) {
                 <ul>
                     <li><a href="https://www.facebook.com/flor.mendozaflor" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="https://www.tiktok.com/@tu-perfil" target="_blank"><i class="fab fa-tiktok"></i></a></li>
-                    <li><a href="mailto:info@cetprojct.edu.pe"><i class="fas fa-envelope"></i></a></li>
+                    <li><a href="mailto:cetproamf2021@gmail.com"><i class="fas fa-envelope"></i></a></li>
                 </ul>
             </div>
             <label for="menu-toggle" class="menu-hamburguesa"><i class="fas fa-bars"></i></label>
@@ -141,7 +141,7 @@ function e($str) {
                                 <div class="info-icon"><i class="fas fa-envelope"></i></div>
                                 <div class="info-content">
                                     <h4>Correos Electrónicos</h4>
-                                    <p>Información: info@cetprojct.edu.pe<br>Soporte: soporte@cetprodamf.edu.pe</p>
+                                    <p>Información: cetproamf2021@gmail.com<br>Soporte: cetproamf2021@gmail.com</p>
                                 </div>
                             </div>
                             
@@ -309,7 +309,7 @@ function e($str) {
             <div class="columna contacto">
                 <h5>Contacto Sede <?= e($sede['nombre']) ?></h5>
                 <p><i class="fas fa-phone"></i> <?= e($sede['telefono']) ?></p>
-                <p><i class="fas fa-envelope"></i> info@cetprojct.edu.pe</p>
+                <p><i class="fas fa-envelope"></i> cetproamf2021@gmail.com</p>
                 <p><i class="fas fa-map-marker-alt"></i> <?= e($sede['direccion']) ?></p>
                 <div class="enlace-social-pie">
                     <ul>

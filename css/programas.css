@@ -4,7 +4,7 @@
 
 /* Banner de página */
 .page-banner {
-    min-height: 50vh;
+    min-height: 65vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,7 +34,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg,hsl(223, 33%, 45%) 0%, transparent 100%);
+    background: linear-gradient(135deg,#a83121 0%, transparent 100%);
     z-index: 1;
 }
 
@@ -184,6 +184,8 @@
 =========================== */
 .seccion-programas-grid {
     padding: 80px 0;
+    background-color: #a83121dd;
+
 }
 
 .programas-info {
@@ -214,7 +216,7 @@
 
 .stat .label {
     font-size: 0.9rem;
-    color: var(--text-muted);
+    color: var(--bg-primary);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -223,11 +225,13 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    color: var(--brand-yellow);
+
 }
 
 .ordenamiento label {
     font-weight: 500;
-    color: var(--text-primary);
+    color: var(--bg-primary);
 }
 
 .ordenamiento select {

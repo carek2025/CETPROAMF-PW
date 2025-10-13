@@ -1,15 +1,18 @@
 <?php
-// Conexión a la base de datos
-$host = "localhost";
-$user = "root";
-$pass = "Java2025";
-$db = "cetpro";
-
-$conn = new mysqli($host, $user, $pass, $db);
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+// En tu script principal
+require_once 'config.php';
+try {
+    $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    if ($conn->connect_error) {
+        throw new Exception("Error de conexión: " . $conn->connect_error);
+    }
+} catch (Exception $e) {
+    // Loguear el error en un archivo de logs
+    error_log($e->getMessage());
+    // Mostrar mensaje amigable al usuario
+    echo "Lo sentimos, ocurrió un error al conectar con la base de datos. Por favor, intenta de nuevo más tarde.";
+    exit;
 }
-
 // Sede seleccionada por GET, por defecto 1
 $sede_id = isset($_GET['sede']) ? intval($_GET['sede']) : 1;
 
@@ -76,7 +79,7 @@ function e($str) {
         <div class="nav-secundario">
             <div class="nav-secundario-izquierda">
                 <a href="index.html#preguntas-frecuentes"><i class="fa-solid fa-circle-question"></i>Preguntas Frecuentes</a>
-                <p><i class="fa-solid fa-envelope"></i>soporte@cetprodamf.edu.pe</p>
+                <p><i class="fa-solid fa-envelope"></i>cetproamf2021@gmail.com</p>
             </div>
             <div class="nav-secundario-derecha">
                 <ul>
@@ -104,7 +107,7 @@ function e($str) {
                 <ul>
                     <li><a href="https://www.facebook.com/flor.mendozaflor" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="https://www.tiktok.com/@tu-perfil" target="_blank"><i class="fab fa-tiktok"></i></a></li>
-                    <li><a href="mailto:info@cetprojct.edu.pe"><i class="fas fa-envelope"></i></a></li>
+                    <li><a href="mailto:cetproamf2021@gmail.com"><i class="fas fa-envelope"></i></a></li>
                 </ul>
             </div>
             <label for="menu-toggle" class="menu-hamburguesa"><i class="fas fa-bars"></i></label>
@@ -262,9 +265,9 @@ function e($str) {
                                             <span>(063) 421-8900</span>
                                         </a>
 
-                                        <a href="mailto:info@cetprojct.edu.pe" class="contacto-item">
+                                        <a href="mailto:cetproamf2021@gmail.com" class="contacto-item">
                                             <i class="fas fa-envelope"></i>
-                                            <span>info@cetprojct.edu.pe</span>
+                                            <span>cetproamf2021@gmail.com</span>
                                         </a>
 
                                         <?php if (!empty($sede['whatsapp'])): ?>
@@ -524,13 +527,13 @@ function e($str) {
             <div class="columna contacto">
                 <h5>Contacto</h5>
                 <p><i class="fas fa-phone"></i> <?= e($sede['telefono']) ?></p>
-                <p><i class="fas fa-envelope"></i> info@cetprojct.edu.pe</p>
+                <p><i class="fas fa-envelope"></i> cetproamf2021@gmail.com</p>
                 <p><i class="fas fa-map-marker-alt"></i> <?= e($sede['direccion']) ?></p>
                 <div class="enlace-social-pie">
                     <ul>
                         <li><a href="https://www.facebook.com/flor.mendozaflor" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="https://www.tiktok.com/@tu-perfil" target="_blank"><i class="fab fa-tiktok"></i></a></li>
-                        <li><a href="mailto:info@cetprojct.edu.pe"><i class="fas fa-envelope"></i></a></li>
+                        <li><a href="mailto:cetproamf2021@gmail.com"><i class="fas fa-envelope"></i></a></li>
                     </ul>
                 </div>
             </div>

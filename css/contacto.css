@@ -4,7 +4,7 @@
 
 /* Banner de página */
 .page-banner {
-    height: 50vh;
+    height: 65vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,7 +34,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg,hsl(223, 33%, 45%) 0%, transparent 100%);
+    background: linear-gradient(135deg,#a83121 0%, transparent 100%);
     z-index: 1;
 }
 
@@ -275,8 +275,17 @@
 =========================== */
 .seccion-formularios {
     padding: 80px 0;
-}
+    background-color: #a83121dd;
 
+}
+.seccion-formularios h2{
+    color: var(--brand-yellow);
+
+}
+.seccion-formularios p{
+    color: var(--bg-primary);
+
+}
 .formularios-tabs {
     background: white;
     border-radius: var(--border-radius);
@@ -304,7 +313,6 @@
     transition: var(--transition);
     font-weight: 500;
 }
-
 .tab-btn i {
     font-size: 24px;
     margin-bottom: 5px;
@@ -367,7 +375,7 @@
 .form-group label {
     display: block;
     margin-bottom: 8px;
-    color: var(--text-primary);
+    color: var(--bg-primary);
     font-weight: 500;
 }
 
@@ -432,8 +440,10 @@
     transition: var(--transition);
     flex-shrink: 0;
     margin-top: 2px;
+    margin-right: 10px;
     display: inline-block;
 }
+
 
 .checkbox-label input[type="checkbox"]:checked + .checkmark {
     background: var(--brand-yellow);
@@ -466,7 +476,18 @@
 .form-actions .btn {
     min-width: 160px;
 }
-
+.seccion-formularios .btn-primary:hover{
+    background-color: white;
+    color: #ffd700;
+}
+.seccion-formularios .btn-secondary{
+    background-color: aliceblue;
+    color: #a39106;
+}
+.seccion-formularios .btn-secondary:hover{
+    background-color: #ffd700;
+    color: aliceblue;
+}
 /* =========================== 
    CONTACTO RÁPIDO 
 =========================== */
@@ -533,7 +554,22 @@
     color: var(--text-muted);
     line-height: 1.4;
 }
-
+.cta-buttons .btn-primary{
+    background-color: #25D366;
+    color: #d4edda;
+}
+.cta-buttons .btn-primary:hover{
+    background-color: #d4edda;
+    color: #25D366;
+}
+.cta-buttons .btn-secondary{
+    background-color: #d4edda;
+    color: var(--brand-yellow);
+}
+.cta-buttons .btn-secondary:hover{
+    background-color: var(--brand-yellow);
+    color: #d4edda;
+}
 /* =========================== 
    WHATSAPP FLOTANTE 
 =========================== */
