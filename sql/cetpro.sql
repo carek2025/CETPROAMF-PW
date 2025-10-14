@@ -1,7 +1,9 @@
 -- Base de datos: cetpro
 CREATE DATABASE IF NOT EXISTS cetpro CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE cetpro;
-
+CREATE USER 'cetpro_admin'@'localhost' IDENTIFIED BY 'OsiveArsenio2021@';
+GRANT ALL PRIVILEGES ON cetpro.* TO 'cetpro_admin'@'localhost';
+FLUSH PRIVILEGES;
 -- Tabla de sedes
 CREATE TABLE IF NOT EXISTS sedes (
   id INT AUTO_INCREMENT PRIMARY KEY,
