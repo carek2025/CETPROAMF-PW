@@ -285,6 +285,15 @@
     // DATOS DE EVENTOS (rutas corregidas sin "/" inicial)
     const EVENTOS_DATA = [
       {
+        titulo: "II Encuentro Nacional de CETPRO - Huánuco 2025",
+        descripcion: "Participa en el II Encuentro Nacional, X Macroregional y XIV Regional de CETPRO. Un mega evento en modalidad híbrida con ponentes nacionales e internacionales. Ofrece talleres en Computación, Mecánica, Peluquería, Textil, Panadería y más. ¡Certificación oficial de la DRE Huánuco!",
+        fechaTexto: "Octubre 22-24 2025",
+        autor: "CETPRO Arsenio Mendoza Flor",
+        comentarios: 150,
+        imagen: "img/eventos/evento-nacional-2025-1.jpeg",
+        categoria: "academicos"
+      },
+      {
         titulo: "Demostración Teórico-Práctico para obtener el Título de Auxiliar.",
         descripcion: "Demostración Teórico-Práctico para obtener el Título de Auxiliar Técnico en la opción ocupacional Computación e Informática. ¡Éxitos en esta etapa!",
         fechaTexto: "Julio 24 2025",
