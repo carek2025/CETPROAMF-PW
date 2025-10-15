@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Detalle de Programa — CETPRO Arsenio Mendoza Flor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Programa - CETPRO Arsenio Mendoza Flor</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/programas.css">
     <link rel="stylesheet" href="css/programa_detalle.css">
-
+</head>
 <body>
-    <!-- Reutiliza tu header (se asume que main.css ya lo controla) -->
+    <!-- HEADER - IDÉNTICO A PROGRAMAS.HTML -->
     <header class="cabecera">
         <div class="nav-secundario">
             <div class="nav-secundario-izquierda">
@@ -26,7 +26,9 @@
             </div>
         </div>
         <div class="contenedor">
-            <div class="logo"><a href="index.html"><img src="img/logo-cetprodamf.png" alt="Logo"></a></div>
+            <div class="logo">
+                <a href="index.html"><img src="img/logo-cetprodamf.png" alt="Logo CETPRO Arsenio Mendoza Flor"></a>
+            </div>
             <input type="checkbox" id="menu-toggle">
             <nav class="menu">
                 <ul>
@@ -38,106 +40,193 @@
                     <li><a href="contacto.php">Contacto</a></li>
                 </ul>
             </nav>
+            <div class="enlace-social-cabecera">
+                <ul>
+                    <li><a href="https://www.facebook.com/flor.mendozaflor" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.tiktok.com/@tu-perfil" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                    <li><a href="mailto:info@cetprojct.edu.pe"><i class="fas fa-envelope"></i></a></li>
+                </ul>
+            </div>
             <label for="menu-toggle" class="menu-hamburguesa"><i class="fas fa-bars"></i></label>
-
         </div>
     </header>
 
-    <main class="contenedor" style="margin-top: 140px;">
-        <!-- Breadcrumb + título -->
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <a href="index.html">Inicio</a> <span>/</span>
-            <a href="programas.html">Programas</a> <span>/</span>
-            <span id="pd-breadcrumb-current">Detalle</span>
-        </nav>
+    <!-- MAIN - SOLO AQUÍ EL FONDO ROJO -->
+    <main>
+        <!-- Breadcrumb -->
+        <section class="seccion-breadcrumb">
+            <div class="contenedor">
+                <nav class="breadcrumb" aria-label="breadcrumb">
+                    <ol>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="programas.html">Programas de Estudios</a></li>
+                        <li aria-current="page">Detalle del Programa</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
 
-        <section class="pd-detalle" aria-labelledby="pd-title">
-            <div class="pd-detalle-grid">
-                <!-- Contenido principal -->
-                <article>
-                    <header>
-                        <h1 id="pd-title">Título del Programa</h1>
-                        <p id="pd-subtitle" class="text-muted">Subtítulo o tagline del programa</p>
+        <!-- Contenido Principal - FONDO ROJO SOLO AQUÍ -->
+        <section class="seccion-programa-detalle">
+            <div class="contenedor">
+                <div class="pd-detalle-grid">
+                    <!-- Contenido principal -->
+                    <article class="pd-main-content">
+                        <header class="pd-header">
+                            <h1 id="pd-title">Soporte Técnico y Operaciones de Centros de Cómputo</h1>
+                            <p id="pd-subtitle" class="text-muted">Programa Técnico Especializado - Certificación MINEDU</p>
 
-                        <div class="pd-acciones-top">
-                            <a id="pd-inscribirme" class="btn btn-primary" href="#">Inscribirme</a>
-                            <button id="pd-fav" class="btn btn-secondary" aria-pressed="false"><i class="far fa-heart"></i> Favorito</button>
-                            <button id="pd-share" class="btn btn-secondary" aria-label="Compartir"><i class="fas fa-share-alt"></i> Compartir</button>
+                            <div class="pd-acciones-top">
+                                <a id="pd-inscribirme" class="btn btn-primary" href="inscripcion-preliminar.html">Inscribirme Ahora</a>
+                                <button id="pd-fav" class="btn btn-secondary" aria-pressed="false"><i class="far fa-heart"></i> Favoritos</button>
+                                <button id="pd-share" class="btn btn-secondary" aria-label="Compartir"><i class="fas fa-share-alt"></i> Compartir</button>
+                            </div>
+
+                            <div class="pd-meta-rapida">
+                                <span class="pd-chip"><i class="fas fa-certificate"></i> <strong>40</strong> créditos</span>
+                                <span class="pd-chip"><i class="fas fa-clock"></i> <strong>6 meses</strong></span>
+                                <span class="pd-chip"><i class="fas fa-calendar-alt"></i> <strong>01 Feb 2025</strong> — <strong>01 Jul 2025</strong></span>
+                                <span class="pd-chip"><i class="fas fa-door-open"></i> Salón: <span>Taller Cómputo 1</span></span>
+                                <span class="pd-chip"><i class="fas fa-users"></i> <strong>25</strong> vacantes</span>
+                            </div>
+                        </header>
+
+                        <figure class="pd-imagen-container">
+                            <img id="pd-imagen-salon" src="img/tres-personas-los-examinadores-de-poligrafo-trabajan-en-la-oficina-con-el-equipo-de-su-detector-de-mentiras.jpg" alt="Salón de Cómputo" loading="lazy">
+                            <figcaption>Vista del Taller de Cómputo</figcaption>
+                        </figure>
+
+                        <section id="pd-descripcion" class="pd-section">
+                            <h2>Descripción del Programa</h2>
+                            <p class="text-secondary">Formación integral en mantenimiento, reparación y soporte técnico de sistemas computacionales. Aprenderás a diagnosticar problemas hardware y software, instalar y configurar sistemas operativos, redes locales y brindar asistencia técnica profesional. <strong>Certificación oficial MINEDU</strong> con validez nacional.</p>
+                        </section>
+
+                        <section id="pd-temario" class="pd-section">
+                            <h2>Temario y Unidades Didácticas</h2>
+                            <p class="text-muted">5 módulos principales con 40 créditos totales</p>
+                            <div class="pd-modulos-grid" id="pd-modulos-grid">
+                                <div class="pd-modulo-card">
+                                    <img src="img/icono-hardware.png" alt="Hardware">
+                                    <h3>Módulo 1: Fundamentos Hardware</h3>
+                                    <div class="pd-modulo-meta">
+                                        <span><i class="fas fa-clock"></i> 80 horas</span>
+                                        <span><i class="fas fa-certificate"></i> 8 créditos</span>
+                                    </div>
+                                    <p>Componentes, ensamblaje y diagnóstico básico</p>
+                                </div>
+                                <div class="pd-modulo-card">
+                                    <img src="img/icono-software.png" alt="Software">
+                                    <h3>Módulo 2: Sistemas Operativos</h3>
+                                    <div class="pd-modulo-meta">
+                                        <span><i class="fas fa-clock"></i> 72 horas</span>
+                                        <span><i class="fas fa-certificate"></i> 8 créditos</span>
+                                    </div>
+                                    <p>Instalación y configuración Windows/Linux</p>
+                                </div>
+                                <!-- Más módulos... -->
+                            </div>
+                        </section>
+
+                        <section id="pd-documentos" class="pd-section">
+                            <h2>Materiales y Descargas</h2>
+                            <ul id="pd-downloads" class="pd-downloads-list">
+                                <li><a href="#"><i class="fas fa-file-pdf"></i> Syllabus Completo (PDF)</a></li>
+                                <li><a href="#"><i class="fas fa-file-pdf"></i> Cronograma 2025 (PDF)</a></li>
+                                <li><a href="#"><i class="fas fa-file-pdf"></i> Lista de Materiales (PDF)</a></li>
+                            </ul>
+                        </section>
+                    </article>
+
+                    <!-- Sidebar -->
+                    <aside class="pd-sidebar" aria-labelledby="pd-side-title">
+                        <div class="pd-sidebar-sticky">
+                            <h3 id="pd-side-title">Docente Responsable</h3>
+                            <div id="pd-teachers-list" class="pd-teachers-container">
+                                <div class="pd-teacher-card">
+                                    <img src="img/docente-percy.jpg" alt="Percy Bustamante">
+                                    <div class="pd-teacher-info">
+                                        <h4>Percy Bustamante Zevallos</h4>
+                                        <p>Ingeniero de Sistemas • 10 años experiencia</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pd-info-rapida card-institucional">
+                                <h4>Información Rápida</h4>
+                                <ul>
+                                    <li>Créditos: <strong>40</strong></li>
+                                    <li>Duración: <strong>6 meses</strong></li>
+                                    <li>Vacantes: <strong>25</strong></li>
+                                    <li>Horario: <strong>3:00 PM - 7:45 PM</strong></li>
+                                </ul>
+                                <a class="btn btn-primary" href="contacto.php">Contactar</a>
+                            </div>
                         </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
 
-                        <div class="pd-meta-rapida" aria-hidden="true">
-                            <span class="pd-chip"><i class="fas fa-certificate"></i> <strong id="pd-creditos">40</strong> créditos</span>
-                            <span class="pd-chip"><i class="fas fa-clock"></i> <strong id="pd-duracion">6 meses</strong></span>
-                            <span class="pd-chip"><i class="fas fa-calendar-alt"></i> <strong id="pd-fecha-inicio">01 Feb 2025</strong> — <strong id="pd-fecha-fin">01 Jul 2025</strong></span>
-                            <span class="pd-chip"><i class="fas fa-door-open"></i> Salón: <span id="pd-salon">Taller 2</span></span>
-                        </div>
-
-                    </header>
-
-                    <figure>
-                        <img id="pd-imagen-salon" class="pd-imagen-salon" src="img/default-salon.jpg" alt="Salón de formación" loading="lazy">
-                    </figure>
-
-                    <section id="pd-descripcion" class="seccion-header" style="margin-top:18px;">
-                        <h2>Descripción</h2>
-                        <p class="text-secondary" id="pd-desc-text">Descripción extensa del programa. Aquí se explica el enfoque, competencias a desarrollar y salida laboral.</p>
-                    </section>
-
-                    <section id="pd-temario" style="margin-top:18px;">
-                        <h2>Temario y Unidades</h2>
-                        <p class="text-muted">A continuación verás los módulos y unidades didácticas con sus horas, créditos y una breve descripción.</p>
-
-                        <!-- Módulos en tarjeta -->
-                        <div class="pd-modulos-grid" id="pd-modulos-grid">
-                            <!-- Cada .pd-modulo-card se generará por JS -->
-                        </div>
-
-                        <!-- Accordion con más detalle por módulo (opcional) -->
-                        <div class="pd-accordion" id="pd-accordion"></div>
-                    </section>
-
-                    <section id="pd-documents" style="margin-top:28px;">
-                        <h2>Materiales y descargas</h2>
-                        <ul id="pd-downloads">
-                            <!-- links a PDFs -->
-                        </ul>
-                    </section>
-                </article>
-
-                <!-- Sidebar: Profesores y datos rápidos -->
-                <aside class="pd-sidebar" aria-labelledby="pd-side-title">
-                    <div style="background: transparent;">
-                        <h3 id="pd-side-title">Docentes del Programa</h3>
-                        <div id="pd-teachers-list">
-                            <!-- tarjetas de docente generadas por JS -->
-                        </div>
-
-                        <div style="height:18px"></div>
-
-                        <div class="card-institucional" style="padding:16px;">
-                            <h4>Información rápida</h4>
-                            <p class="text-muted">Créditos necesarios: <strong id="pd-creditos-aside">40</strong></p>
-                            <p class="text-muted">Duración: <strong id="pd-duracion-aside">6 meses</strong></p>
-                            <p class="text-muted">Vacantes: <strong id="pd-vacantes">25</strong></p>
-                            <a id="pd-contacto" class="btn btn-primary" href="contacto.php">Solicitar Información</a>
-                        </div>
+        <!-- CTA Inscripción - IDÉNTICO A PROGRAMAS -->
+        <section class="seccion-cta">
+            <div class="contenedor">
+                <div class="cta-content">
+                    <h2>¿Listo para comenzar?</h2>
+                    <p>Reserva tu vacante hoy y transforma tu futuro profesional</p>
+                    <div class="cta-buttons">
+                        <a href="inscripcion-preliminar.html" class="btn btn-primary">Inscribirme Ahora</a>
+                        <a href="contacto.php" class="btn btn-secondary">Hablar con Asesor</a>
                     </div>
-                </aside>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="pie-pagina" style="margin-top:40px;">
-        <!-- reuse footer from main site -->
+    <!-- FOOTER - IDÉNTICO A PROGRAMAS.HTML -->
+    <footer class="pie-pagina">
         <div class="contenedor">
             <div class="columna contacto">
                 <h5>Contacto</h5>
                 <p><i class="fas fa-phone"></i> +51 954 803 212</p>
                 <p><i class="fas fa-envelope"></i> info@cetprojct.edu.pe</p>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Minero N° 500 - Yanacancha - Pasco</p>
+                <div class="enlace-social-pie">
+                    <ul>
+                        <li><a href="https://www.facebook.com/flor.mendozaflor" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@tu-perfil" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                        <li><a href="mailto:info@cetprojct.edu.pe"><i class="fas fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="columna noticias">
+                <h5>Últimas Noticias</h5>
+                <div class="noticia">
+                    <p>Nuevo laboratorio de robótica inaugurado</p>
+                    <span>Enero 15, 2025</span>
+                </div>
+                <div class="noticia">
+                    <p>Convenio con empresas del sector industrial</p>
+                    <span>Enero 10, 2025</span>
+                </div>
+            </div>
+            <div class="columna enlaces-rapidos">
+                <h5>Enlaces Rápidos</h5>
+                <ul>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="programas.html">Programas</a></li>
+                    <li><a href="eventos.php">Eventos</a></li>
+                    <li><a href="ubicacion.html">Ubicación</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
+                </ul>
             </div>
         </div>
+        <div class="pie-inferior">
+            <p>© 2025 CETPRO Arsenio Mendoza Flor | Todos los derechos reservados | <a href="politica-privacidad.html">Política de privacidad</a></p>
+        </div>
     </footer>
-    <script src="js/programa_detalle.js"></script>
 
+    <script src="js/main.js"></script>
+    <script src="js/programas.js"></script>
+    <script src="js/programa_detalle.js"></script>
 </body>
 </html>

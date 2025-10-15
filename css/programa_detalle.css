@@ -1,109 +1,322 @@
-body{
-    background-color: #a83121dd;
+/* =========================== 
+   ESTILOS ESPECÍFICOS - PÁGINA PROGRAMA DETALLE 
+=========================== */
+
+/* Breadcrumb Section */
+.seccion-breadcrumb {
+    padding: 20px 0;
+    background: var(--bg-primary);
 }
+
+/* FONDO ROJO SOLO EN ESTA SECCIÓN */
+.seccion-programa-detalle {
+    padding: 80px 0;
+    background-color: #a83121dd; /* ← FONDO ROJO AQUÍ SOLO */
+}
+
+/* Grid principal */
 .pd-detalle-grid {
     display: grid;
-    grid-template-columns: 1fr 340px;
+    grid-template-columns: 1fr 320px;
     gap: 40px;
     align-items: start;
-    margin-top: 40px;
-    background-color: #a83121dd;
+}
 
+@media (max-width: 1024px) {
+    .pd-detalle-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
-@media (max-width: 1029px) {
-    .pd-detalle-grid { grid-template-columns: 1fr; }
-}
-.pd-imagen-salon {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 12px;
+
+/* Contenido principal */
+.pd-main-content {
+    background: white;
+    padding: 40px;
+    border-radius: var(--border-radius);
     box-shadow: var(--card-shadow);
 }
+
+.pd-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.pd-header .text-muted {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: var(--text-secondary);
+}
+
+.pd-acciones-top {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
 .pd-meta-rapida {
     display: flex;
-    gap: 12px;
     flex-wrap: wrap;
-    margin: 18px 0;
+    gap: 15px;
+    margin-bottom: 40px;
 }
+
 .pd-chip {
     background: var(--bg-secondary);
-    padding: 10px 14px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
+    padding: 12px 18px;
+    border-radius: 25px;
+    font-size: 0.9rem;
     font-weight: 600;
-    display: inline-flex;
-    gap: 8px;
-    align-items: center;
-}
-/* Sidebar profesores */
-.pd-sidebar {
-    position: sticky;
-    top: 120px;
-}
-.pd-teacher-card {
     display: flex;
-    gap: 12px;
     align-items: center;
-    padding: 12px;
-    border-radius: 10px;
-    background: white;
-    box-shadow: var(--card-shadow);
-    margin-bottom: 12px;
+    gap: 8px;
     border: 1px solid var(--border-color);
+    color: var(--text-primary);
 }
-.pd-teacher-card img {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
+
+.pd-imagen-container {
+    margin-bottom: 30px;
+}
+
+.pd-imagen-container img {
+    width: 100%;
+    height: 350px;
     object-fit: cover;
-    border: 3px solid var(--brand-yellow);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
 }
-.pd-teacher-info h4 { margin: 0 0 4px 0; font-size: 1rem; }
-.pd-teacher-info p { margin: 0; font-size: 0.85rem; color: var(--text-muted); }
-/* Módulos grid */
+
+.pd-imagen-container figcaption {
+    text-align: center;
+    margin-top: 10px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.pd-section {
+    margin-top: 50px;
+}
+
+.pd-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+    position: relative;
+}
+
+.pd-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--brand-yellow);
+}
+
+.pd-section .text-secondary {
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
 .pd-modulos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
     margin-top: 30px;
 }
+
 .pd-modulo-card {
-    background: white;
-    padding: 18px;
-    border-radius: 12px;
+    background: var(--bg-secondary);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.pd-modulo-card:hover {
+    transform: translateY(-5px);
     box-shadow: var(--card-shadow);
-    border: 1px solid var(--border-color);
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
 }
-.pd-modulo-thumb {
-    width: 64px;
-    height: 64px;
+
+.pd-modulo-card img {
+    width: 60px;
+    height: 60px;
     border-radius: 8px;
-    object-fit: cover;
-    flex-shrink: 0;
+    margin-bottom: 15px;
 }
-.pd-modulo-meta { font-size: 0.9rem; color: var(--text-muted); margin-top: 8px; }
-/* Accordion simple */
-.pd-accordion { margin-top: 18px; }
-.pd-accordion button {
-    width: 100%;
-    text-align: left;
-    padding: 12px 16px;
-    background: white;
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
+
+.pd-modulo-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.pd-modulo-meta {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-weight: 600;
+    gap: 15px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
 }
-.pd-accordion .pd-panel { max-height: 0; overflow: hidden; transition: max-height 0.32s ease; }
-.pd-accordion .pd-panel.open { max-height: 1000px; padding: 12px 16px; }
-.pd-acciones-top { display:flex; gap:12px; margin-top:12px; }
-/* Small helpers */
-.text-muted { color: var(--text-muted); 
+
+.pd-downloads-list {
+    list-style: none;
+    margin-top: 25px;
+}
+
+.pd-downloads-list li {
+    margin-bottom: 15px;
+}
+
+.pd-downloads-list a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    color: var(--brand-yellow);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.pd-downloads-list a:hover {
+    background: var(--brand-yellow);
+    color: white;
+}
+
+/* Sidebar */
+.pd-sidebar {
+    position: sticky;
+    top: 160px;
+    height: fit-content;
+}
+
+.pd-sidebar-sticky {
+    background: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.pd-sidebar h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.pd-teachers-container {
+    margin-bottom: 30px;
+}
+
+.pd-teacher-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.pd-teacher-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.pd-teacher-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.pd-teacher-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.pd-info-rapida {
+    padding: 25px;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+}
+
+.pd-info-rapida h4 {
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.pd-info-rapida ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.pd-info-rapida li {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    color: var(--text-secondary);
+}
+
+.pd-info-rapida li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--brand-yellow);
+    font-weight: bold;
+}
+
+.pd-info-rapida .btn {
+    width: 100%;
+}
+
+/* Breadcrumb */
+.breadcrumb ol {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.breadcrumb a {
+    color: var(--brand-yellow);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .seccion-programa-detalle {
+        padding: 60px 0;
+    }
+
+    .pd-main-content {
+        padding: 25px;
+    }
+
+    .pd-header h1 {
+        font-size: 2rem;
+    }
+
+    .pd-acciones-top,
+    .pd-meta-rapida {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pd-modulos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pd-sidebar-sticky {
+        padding: 20px;
+    }
 }
