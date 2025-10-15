@@ -3,8 +3,8 @@
 session_start(); // <-- AÑADIR ESTA LÍNEA
 
 $host = "localhost";
-$user = "root";
-$pass = "Java2025"; // Cambia esto por tu contraseña si es diferente
+$user = "cetpro_admin";
+$pass = "OsiveArsenio2021@"; // Cambia esto por tu contraseña si es diferente
 $db = "cetpro";
 
 $conn = new mysqli($host, $user, $pass, $db);

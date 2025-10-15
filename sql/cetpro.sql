@@ -1,7 +1,7 @@
 -- Base de datos: cetpro
 CREATE DATABASE IF NOT EXISTS cetpro CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE cetpro;
-CREATE USER 'cetpro_admin'@'localhost' IDENTIFIED BY 'OsiveArsenio2021@';
+ALTER USER 'cetpro_admin'@'localhost' IDENTIFIED WITH mysql_native_password BY 'OsiveArsenio2021@';
 GRANT ALL PRIVILEGES ON cetpro.* TO 'cetpro_admin'@'localhost';
 FLUSH PRIVILEGES;
 -- Tabla de sedes
@@ -241,17 +241,23 @@ INSERT INTO galeria (sede_id, titulo, descripcion, imagen) VALUES
 
 
 -- Tabla para almacenar los envíos del formulario de contacto general
-CREATE TABLE IF NOT EXISTS consultas_contacto (
+CREATE TABLE formulario_contacto (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  sede_id INT NULL,
-  nombre VARCHAR(100) NOT NULL,
+  nombres VARCHAR(100) NOT NULL,
   apellidos VARCHAR(100) NOT NULL,
-  email VARCHAR(255) NOT NULL,
-  telefono VARCHAR(50) DEFAULT NULL,
-  asunto VARCHAR(255) NOT NULL,
+  correo VARCHAR(150) NOT NULL,
+  telefono VARCHAR(20),
+  asunto VARCHAR(150),
   mensaje TEXT NOT NULL,
-  acepto_terminos TINYINT(1) NOT NULL DEFAULT 0,
-  fecha_envio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  leido TINYINT(1) NOT NULL DEFAULT 0,
-  FOREIGN KEY (sede_id) REFERENCES sedes(id) ON DELETE SET NULL
+  fecha_envio TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+CREATE TABLE newsletter_suscripciones (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    correo VARCHAR(255) NOT NULL UNIQUE,
+    interes VARCHAR(50) NOT NULL,
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    ip VARCHAR(45),
+    estado ENUM('activo', 'inactivo') DEFAULT 'activo'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

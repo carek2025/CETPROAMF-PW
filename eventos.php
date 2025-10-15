@@ -1,4 +1,4 @@
-<?php /* eventos.php (fusionado) */ ?>
+<?php /* eventos.php (versión mejorada) */ ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,7 +8,7 @@
   <!-- Fuentes / Iconos -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <link rel="stylesheet" href="css/main.css">k
+  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/eventos.css">
 </head>
 <body>
@@ -103,7 +103,6 @@
             </div>
         </section>
 
-
     <!-- Eventos destacados (HERO) -->
     <section class="seccion-eventos-destacados">
       <div class="contenedor">
@@ -174,6 +173,8 @@
             <div class="leyenda-item"><span class="leyenda-color graduacion"></span><span>Graduaciones</span></div>
             <div class="leyenda-item"><span class="leyenda-color taller"></span><span>Talleres</span></div>
             <div class="leyenda-item"><span class="leyenda-color conferencia"></span><span>Conferencias</span></div>
+            <div class="leyenda-item"><span class="leyenda-color convenios"></span><span>Convenios</span></div>
+            <div class="leyenda-item"><span class="leyenda-color Eventos"></span><span>Eventos</span></div>
           </div>
         </div>
       </div>
@@ -275,19 +276,19 @@
         </div>
     </footer>
 
-
   <!-- ===========================
-       JAVASCRIPT (fusionado de eventos.js)
+       JAVASCRIPT COMPLETO MEJORADO
   ============================ -->
   <script>
   document.addEventListener('DOMContentLoaded', function() {
 
-    // DATOS DE EVENTOS (rutas corregidas sin "/" inicial)
+    // DATOS DE EVENTOS CON FECHAS REALES
     const EVENTOS_DATA = [
       {
         titulo: "II Encuentro Nacional de CETPRO - Huánuco 2025",
         descripcion: "Participa en el II Encuentro Nacional, X Macroregional y XIV Regional de CETPRO. Un mega evento en modalidad híbrida con ponentes nacionales e internacionales. Ofrece talleres en Computación, Mecánica, Peluquería, Textil, Panadería y más. ¡Certificación oficial de la DRE Huánuco!",
         fechaTexto: "Octubre 22-24 2025",
+        fechaISO: "2025-10-22 a 2025-10-24",
         autor: "CETPRO Arsenio Mendoza Flor",
         comentarios: 150,
         imagen: "img/eventos/evento-nacional-2025-1.jpeg",
@@ -297,92 +298,92 @@
         titulo: "Demostración Teórico-Práctico para obtener el Título de Auxiliar.",
         descripcion: "Demostración Teórico-Práctico para obtener el Título de Auxiliar Técnico en la opción ocupacional Computación e Informática. ¡Éxitos en esta etapa!",
         fechaTexto: "Julio 24 2025",
+        fechaISO: "2025-07-24",
         autor: "By Jona",
         comentarios: 78,
-        imagen: "img/computo-2.png",
+        imagen: "img/eventos/computo-2.png",
         categoria: "academicos"
-      },
-      {
-        titulo: "Open Day CETPRO 2025: talleres y demostraciones",
-        descripcion: "Visitas guiadas a laboratorios, muestra de proyectos estudiantiles y orientación académica.",
-        fechaTexto: "Aug 30 2025",
-        autor: "Equipo CETPRO",
-        comentarios: 12,
-        imagen: "https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1400&auto=format&fit=crop",
-        categoria: "culturales"
-      },
-      {
-        titulo: "Charla: Empleabilidad y Emprendimiento",
-        descripcion: "Consejos prácticos para CV, entrevistas y cómo iniciar tu primer negocio.",
-        fechaTexto: "Sep 05 2025",
-        autor: "Invitado Especial",
-        comentarios: 34,
-        imagen: "img/administracion-2.png", // ← antes: "/imagenes/imagen2.jpg"
-        categoria: "conferencias"
       },
       {
         titulo: "CEREMONIA DE GRADUACIÓN",
         descripcion: "CEREMONIA DE GRADUACIÓN - 2024",
         fechaTexto: "Diciembre 30 2024",
+        fechaISO: "2024-12-30",
         autor: "Coordinación Académica",
         comentarios: 20,
-        imagen: "img/image.png", // ← antes: "/imagenes/imagen3.jpg"
+        imagen: "img/eventos/image.png",
         categoria: "graduaciones"
       },
-       {
+      {
         titulo: "Firma del convenio entre el Colegio Hermilio Valdizan",
-        descripcion: "Doble certificacion a traves de la convalidacion .",
-        fechaTexto: "Sep 22 2025",
+        descripcion: "Doble certificacion a traves de la convalidacion.",
+        fechaTexto: "Septiembre 22 2025",
+        fechaISO: "2025-09-22",
         autor: "Invitado Especial",
         comentarios: 34,
-        imagen: "img/administracion-2.png", // ← antes: "/imagenes/imagen4.jpg"
+        imagen: "img/eventos/convenio.jpg",
         categoria: "convenios"
       },
       {
         titulo: "Certamen de belleza Flor de primavera 2025",
         descripcion: "Certamen",
-        fechaTexto: "Setiembre 16 2025",
+        fechaTexto: "Septiembre 16 2025",
+        fechaISO: "2025-09-16",
         autor: "Coordinación Académica",
         comentarios: 20,
-        imagen: "img/image.png", // ← antes: "/imagenes/imagen5.jpg"
+        imagen: "img/eventos/certamen.jpg",
         categoria: "Eventos"
       },
-       {
+      {
         titulo: "Formacion Tecnica que impulsa sueños y genera oportunidades",
         descripcion: "Brindar Cursos Tecnicos.",
         fechaTexto: "Agosto 27 2025",
+        fechaISO: "2025-08-27",
         autor: "Invitado Especial",
         comentarios: 34,
-        imagen: "img/administracion-2.png", // ← antes: "/imagenes/imagen6.jpg"
+        imagen: "img/eventos/oportunidades.jpg",
         categoria: "conferencias"
       },
       {
         titulo: "Apertura Sub-Sede",
-        descripcion: "Aprertura de nueva Sub-Sede",
+        descripcion: "Apertura de nueva Sub-Sede",
         fechaTexto: "Agosto 27 2025",
+        fechaISO: "2025-08-27",
         autor: "Coordinación Académica",
         comentarios: 20,
-        imagen: "img/image.png", // ← antes: "/imagenes/imagen8.jpg"
+        imagen: "img/eventos/nuevasede.png",
         categoria: "Eventos"
       },
       {
         titulo: "Reconocimiento para BecaTec 2025 del Pronabec",
         descripcion: "Beca para estudiar de manera gratuita.",
-        fechaTexto: "Agosto 13  2025",
+        fechaTexto: "Agosto 13 2025",
+        fechaISO: "2025-08-13",
         autor: "Invitado Especial",
         comentarios: 34,
-        imagen: "img/administracion-2.png", // ← antes: "/imagenes/imagen9.jpg"
+        imagen: "img/eventos/pronabec.jpg",
         categoria: "conferencias"
       },
       {
         titulo: "Dia del Logro",
         descripcion: "Celebracion del dia del Logro",
-        fechaTexto: "Julio 25  2025",
+        fechaTexto: "Julio 25 2025",
+        fechaISO: "2025-07-25",
         autor: "Coordinación Académica",
         comentarios: 20,
-        imagen: "img/image.png", // ← antes: "/imagenes/imagen10.jpg"
+        imagen: "img/eventos/logro.jpg",
         categoria: "Eventos"
       },
+      {
+        titulo: "SRTA. SIMPATÍA 2025",
+        descripcion: "ESTEFANI BRIGITH ROJAS CALLUPE",
+        fechaTexto: "Octubre 13 2025",
+        fechaISO: "2025-10-13",
+        autor: "Coordinación Académica",
+        comentarios: 20,
+        imagen: "img/eventos/miss.jpg",
+        categoria: "Eventos"
+      }
     ];
 
     // ELEMENTOS DEL DOM
@@ -409,17 +410,6 @@
     let paginaActual = 1;
     const eventosPorPagina = 6;
     let fechaCalendario = new Date();
-
-    // Eventos calendario
-    const eventosCalendario = [
-      { fecha: '2025-01-25', titulo: 'Feria Tecnológica', categoria: 'academico' },
-      { fecha: '2025-01-30', titulo: 'Taller Emprendimiento', categoria: 'taller' },
-      { fecha: '2025-02-05', titulo: 'Festival Cultural', categoria: 'cultural' },
-      { fecha: '2025-02-10', titulo: 'Taller Soldadura TIG', categoria: 'taller' },
-      { fecha: '2025-02-15', titulo: 'Conferencia IA', categoria: 'conferencia' },
-      { fecha: '2025-02-20', titulo: 'Torneo Fútbol', categoria: 'deportivo' },
-      { fecha: '2025-03-15', titulo: 'Graduación Marzo', categoria: 'graduacion' }
-    ];
 
     // RENDER: HERO + CARDS
     function slideHTML(ev){
@@ -623,52 +613,7 @@
       document.querySelector('.seccion-eventos-lista')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    // FAVORITOS / INSCRIPCIONES (opcionales)
-    function cargarFavoritos() {
-      const btnFavoritos = document.querySelectorAll('.btn-favorito');
-      btnFavoritos.forEach(btn => {
-        const eventoId = btn.dataset.evento;
-        if (favoritos.includes(eventoId)) {
-          btn.classList.add('active');
-          const icon = btn.querySelector('i');
-          if(icon){ icon.classList.remove('far'); icon.classList.add('fas'); }
-        }
-      });
-    }
-    function toggleFavorito(eventoId, btn) {
-      const index = favoritos.indexOf(eventoId);
-      if (index === -1) {
-        favoritos.push(eventoId);
-        btn.classList.add('active');
-        const icon = btn.querySelector('i'); if(icon){ icon.classList.remove('far'); icon.classList.add('fas'); }
-        mostrarNotificacion('Evento agregado a favoritos', 'success');
-      } else {
-        favoritos.splice(index, 1);
-        btn.classList.remove('active');
-        const icon = btn.querySelector('i'); if(icon){ icon.classList.remove('fas'); icon.classList.add('far'); }
-        mostrarNotificacion('Evento removido de favoritos', 'info');
-      }
-      localStorage.setItem('eventos-favoritos', JSON.stringify(favoritos));
-      trackEvent('toggle_favorito', { evento: eventoId, accion: index === -1 ? 'agregar' : 'remover' });
-    }
-    function manejarInscripcion(eventoId, btn) {
-      const card = btn.closest('.event-card');
-      const titulo = card?.querySelector('h2.titulo')?.textContent || 'Evento';
-      btn.classList.add('loading'); btn.disabled = true;
-      setTimeout(() => {
-        btn.classList.remove('loading'); btn.disabled = false;
-        btn.innerHTML = '<i class="fas fa-check"></i> Inscrito'; btn.classList.add('inscrito');
-        mostrarNotificacion(`Te has inscrito exitosamente a: ${titulo}`, 'success');
-        const insc = JSON.parse(localStorage.getItem('eventos-inscripciones') || '[]');
-        if (!insc.includes(eventoId)) {
-          insc.push(eventoId);
-          localStorage.setItem('eventos-inscripciones', JSON.stringify(insc));
-        }
-        trackEvent('inscripcion_evento', { evento: eventoId, titulo });
-      }, 1200);
-    }
-
-    // CALENDARIO
+    // CALENDARIO MEJORADO
     function generarCalendario() {
       if(!calendarioTitulo) return;
       const año = fechaCalendario.getFullYear();
@@ -680,6 +625,7 @@
       const calendarioGrid = document.querySelector('.calendario-grid');
       if(!calendarioGrid) return;
 
+      // Limpiar días anteriores (excepto headers)
       calendarioGrid.querySelectorAll('.calendario-dia').forEach(d=>d.remove());
 
       const primerDia = new Date(año, mes, 1);
@@ -690,44 +636,92 @@
       const mesAnterior = new Date(año, mes, 0);
       const diasMesAnterior = mesAnterior.getDate();
 
+      const hoy = new Date();
+      hoy.setHours(0, 0, 0, 0); // Normalizar para comparación
+
+      // Días del mes anterior
       for (let i = diaSemanaInicio - 1; i >= 0; i--) {
         calendarioGrid.appendChild(crearDiaCalendario(diasMesAnterior - i, true));
       }
 
-      const hoy = new Date();
+      // Días del mes actual
       for (let dia = 1; dia <= diasEnMes; dia++) {
         const fechaDia = new Date(año, mes, dia);
-        const esHoy = fechaDia.toDateString() === hoy.toDateString();
-        const diaElement = crearDiaCalendario(dia, false, esHoy);
+        fechaDia.setHours(0, 0, 0, 0);
+        const esHoy = fechaDia.getTime() === hoy.getTime();
+        const esPasado = fechaDia < hoy;
+        
+        const diaElement = crearDiaCalendario(dia, false, esHoy, esPasado);
 
+        // Buscar eventos para esta fecha
         const fechaStr = `${año}-${String(mes + 1).padStart(2, '0')}-${String(dia).padStart(2, '0')}`;
-        const eventosDelDia = eventosCalendario.filter(ev => ev.fecha === fechaStr);
-
-        eventosDelDia.forEach(ev => {
-          const el = document.createElement('div');
-          el.className = `calendario-evento ${ev.categoria}`;
-          el.textContent = ev.titulo;
-          el.title = ev.titulo;
-          diaElement.appendChild(el);
+        const eventosDelDia = EVENTOS_DATA.filter(ev => {
+          if (!ev.fechaISO) return false;
+          
+          // Manejar rangos de fechas (como "2025-10-22" a "2025-10-24")
+          if (ev.fechaISO.includes(' a ')) {
+            const [inicioStr, finStr] = ev.fechaISO.split(' a ');
+            const inicio = new Date(inicioStr);
+            const fin = new Date(finStr);
+            const actual = new Date(fechaStr);
+            return actual >= inicio && actual <= fin;
+          }
+          
+          // Fecha única
+          return ev.fechaISO === fechaStr;
         });
+
+        // Agregar eventos al día
+        eventosDelDia.forEach(ev => {
+          const eventoElement = document.createElement('div');
+          eventoElement.className = `calendario-evento ${ev.categoria} ${esPasado ? 'pasado' : 'futuro'}`;
+          eventoElement.textContent = ev.titulo;
+          eventoElement.title = `${ev.titulo} - ${ev.fechaTexto}`;
+          
+          // Agregar tooltip con más información
+          eventoElement.addEventListener('click', function() {
+            mostrarDetalleEvento(ev);
+          });
+          
+          diaElement.appendChild(eventoElement);
+        });
+
+        // Indicador si hay eventos
+        if (eventosDelDia.length > 0) {
+          diaElement.classList.add('tiene-eventos');
+          
+          // Contador de eventos
+          const contador = document.createElement('div');
+          contador.className = 'evento-contador';
+          contador.textContent = eventosDelDia.length;
+          diaElement.querySelector('.calendario-dia-numero').appendChild(contador);
+        }
 
         calendarioGrid.appendChild(diaElement);
       }
 
-      const diasRestantes = 42 - (diaSemanaInicio + diasEnMes);
+      // Días del mes siguiente
+      const totalCeldas = 42; // 6 filas × 7 columnas
+      const celdasUsadas = diaSemanaInicio + diasEnMes;
+      const diasRestantes = totalCeldas - celdasUsadas;
+      
       for (let dia = 1; dia <= diasRestantes; dia++) {
         calendarioGrid.appendChild(crearDiaCalendario(dia, true));
       }
     }
-    function crearDiaCalendario(numero, otroMes = false, esHoy = false) {
+
+    function crearDiaCalendario(numero, otroMes = false, esHoy = false, esPasado = false) {
       const dia = document.createElement('div');
-      dia.className = `calendario-dia ${otroMes ? 'otro-mes' : ''} ${esHoy ? 'hoy' : ''}`;
+      dia.className = `calendario-dia ${otroMes ? 'otro-mes' : ''} ${esHoy ? 'hoy' : ''} ${esPasado ? 'pasado' : ''}`;
+      
       const n = document.createElement('div');
       n.className = 'calendario-dia-numero';
       n.textContent = numero;
       dia.appendChild(n);
+      
       return dia;
     }
+
     function cambiarMesCalendario(direccion) {
       if (direccion === 'prev') fechaCalendario.setMonth(fechaCalendario.getMonth() - 1);
       else fechaCalendario.setMonth(fechaCalendario.getMonth() + 1);
@@ -735,136 +729,321 @@
       trackEvent('cambio_mes_calendario', { mes: fechaCalendario.getMonth() + 1, año: fechaCalendario.getFullYear() });
     }
 
-    // NEWSLETTER
-    function manejarNewsletterSubmit(e) {
-      e.preventDefault();
-      const submitBtn = e.target.querySelector('button[type="submit"]');
-      submitBtn?.classList.add('loading'); if(submitBtn) submitBtn.disabled = true;
-
-      setTimeout(() => {
-        submitBtn?.classList.remove('loading'); if(submitBtn) submitBtn.disabled = false;
-        mostrarNotificacion('¡Te has suscrito exitosamente! Recibirás notificaciones sobre eventos.', 'success');
-        e.target.reset();
-
-        const formData = new FormData(e.target);
-        const data = Object.fromEntries(formData.entries());
-        const suscripciones = JSON.parse(localStorage.getItem('newsletter-suscripciones') || '[]');
-        suscripciones.push({ ...data, fecha: new Date().toISOString(), tipo: 'eventos' });
-        localStorage.setItem('newsletter-suscripciones', JSON.stringify(suscripciones));
-        trackEvent('suscripcion_newsletter', { interes: data.interes || 'todos' });
-      }, 1000);
+    // FUNCIÓN PARA MOSTRAR DETALLES DEL EVENTO
+    function mostrarDetalleEvento(evento) {
+      const modal = document.createElement('div');
+      modal.className = 'modal-evento';
+      
+      modal.innerHTML = `
+        <div class="modal-content">
+          <button class="modal-close">&times;</button>
+          
+          <h3 style="margin-top: 0; color: #2c3e50;">${evento.titulo}</h3>
+          <div style="display: flex; align-items: center; gap: 10px; margin: 15px 0;">
+            <span class="leyenda-color ${evento.categoria}" style="display: inline-block; width: 12px; height: 12px; border-radius: 50%;"></span>
+            <span style="color: #666; font-size: 14px; text-transform: capitalize;">${evento.categoria}</span>
+          </div>
+          <p><strong>Fecha:</strong> ${evento.fechaTexto}</p>
+          <p><strong>Organizador:</strong> ${evento.autor}</p>
+          <p style="margin: 15px 0;">${evento.descripcion}</p>
+          
+          ${evento.imagen ? `<img src="${evento.imagen}" alt="${evento.titulo}" style="width: 100%; border-radius: 8px; margin: 15px 0;">` : ''}
+          
+          <div style="margin-top: 20px; display: flex; gap: 10px;">
+            <button class="btn btn-primary" onclick="inscribirseEvento('${evento.titulo}')">
+              <i class="fas fa-calendar-plus"></i> Inscribirse
+            </button>
+            <button class="btn btn-secondary" onclick="this.closest('.modal-evento').remove()">
+              Cerrar
+            </button>
+          </div>
+        </div>
+      `;
+      
+      document.body.appendChild(modal);
+      
+      // Cerrar modal
+      modal.querySelector('.modal-close').addEventListener('click', () => modal.remove());
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.remove();
+      });
     }
 
-    // UTILIDADES
-    function mostrarNotificacion(mensaje, tipo = 'info') {
-      const notification = document.createElement('div');
-      notification.className = `notification notification-${tipo}`;
-      notification.innerHTML = `
+    // Función global para inscripción
+    window.inscribirseEvento = function(titulo) {
+      mostrarNotificacion(`Te has inscrito al evento: ${titulo}`, 'success');
+      // Cerrar modal después de inscribirse
+      document.querySelector('.modal-evento')?.remove();
+    };
+
+    // NEWSLETTER
+    function manejarNewsletterSubmit(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const formData = new FormData(form);
+    
+    // Validación básica antes de enviar
+    const nombre = formData.get('nombre');
+    const correo = formData.get('correo');
+    const interes = formData.get('interes');
+    
+    if (!nombre || !correo || !interes) {
+        mostrarNotificacion('Todos los campos son obligatorios', 'error');
+        return;
+    }
+    
+    if (!validarEmail(correo)) {
+        mostrarNotificacion('Por favor ingresa un correo electrónico válido', 'error');
+        return;
+    }
+
+    // Verificar si el correo ya existe localmente
+    if (correoYaRegistrado(correo)) {
+        mostrarNotificacion('Este correo electrónico ya está registrado en nuestro newsletter', 'error');
+        return;
+    }
+
+    // Mostrar estado de carga
+    submitBtn?.classList.add('loading');
+    if(submitBtn) submitBtn.disabled = true;
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Suscribiendo...';
+
+    // Enviar datos via AJAX
+    fetch('procesar-newsletter.php', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json',
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error en la respuesta del servidor: ' + response.status);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Respuesta del servidor:', data);
+        
+        if (data.success) {
+            mostrarNotificacion(data.message, 'success');
+            form.reset();
+            
+            // Guardar localmente por seguridad
+            const suscripciones = JSON.parse(localStorage.getItem('newsletter_suscripciones') || '[]');
+            suscripciones.push({ 
+                nombre: nombre,
+                correo: correo,
+                interes: interes,
+                fecha: new Date().toISOString(),
+                tipo: 'eventos',
+                sincronizado: true
+            });
+            localStorage.setItem('newsletter_suscripciones', JSON.stringify(suscripciones));
+            trackEvent('suscripcion_newsletter', { interes: interes || 'todos' });
+        } else {
+            // Verificar si el error es por correo duplicado
+            if (data.message && data.message.includes('duplicad') || data.message && data.message.includes('ya existe')) {
+                mostrarNotificacion('Este correo electrónico ya está registrado en nuestro newsletter', 'error');
+            } else {
+                const errorMsg = data.debug?.error ? `Error: ${data.debug.error}` : data.message;
+                mostrarNotificacion(errorMsg, 'error');
+            }
+            // Guardar localmente como pendiente solo si no es duplicado
+            if (!data.message || !data.message.includes('duplicad')) {
+                guardarSuscripcionPendiente(nombre, correo, interes);
+            }
+        }
+    })
+    .catch(error => {
+        console.error('Error en fetch:', error);
+        // Fallback: guardar solo en localStorage si falla la conexión
+        guardarSuscripcionPendiente(nombre, correo, interes);
+        mostrarNotificacion('Error de conexión. Suscripción guardada localmente.', 'info');
+        form.reset();
+        trackEvent('suscripcion_newsletter_offline', { interes: interes || 'todos' });
+    })
+    .finally(() => {
+        // Restaurar botón
+        submitBtn?.classList.remove('loading');
+        if(submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+        }
+    });
+}
+
+// Función para verificar si el correo ya está registrado localmente
+function correoYaRegistrado(correo) {
+    const suscripciones = JSON.parse(localStorage.getItem('newsletter_suscripciones') || '[]');
+    return suscripciones.some(suscripcion => 
+        suscripcion.correo.toLowerCase() === correo.toLowerCase()
+    );
+}
+
+// Función auxiliar para validar email
+function validarEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
+// Función para guardar suscripción pendiente
+function guardarSuscripcionPendiente(nombre, correo, interes) {
+    // Verificar si ya existe antes de guardar
+    if (correoYaRegistrado(correo)) {
+        return;
+    }
+    
+    const suscripciones = JSON.parse(localStorage.getItem('newsletter_suscripciones') || '[]');
+    suscripciones.push({ 
+        nombre: nombre,
+        correo: correo,
+        interes: interes,
+        fecha: new Date().toISOString(),
+        tipo: 'eventos',
+        pendiente: true,
+        sincronizado: false
+    });
+    localStorage.setItem('newsletter_suscripciones', JSON.stringify(suscripciones));
+}
+
+// Función para intentar sincronizar suscripciones pendientes
+function sincronizarSuscripcionesPendientes() {
+    const suscripciones = JSON.parse(localStorage.getItem('newsletter_suscripciones') || '[]');
+    const pendientes = suscripciones.filter(s => s.pendiente && !s.sincronizado);
+    
+    pendientes.forEach(suscripcion => {
+        const formData = new FormData();
+        formData.append('nombre', suscripcion.nombre);
+        formData.append('correo', suscripcion.correo);
+        formData.append('interes', suscripcion.interes);
+        
+        fetch('procesar-newsletter.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Marcar como sincronizado
+                const index = suscripciones.findIndex(s => 
+                    s.correo === suscripcion.correo && s.fecha === suscripcion.fecha
+                );
+                if (index !== -1) {
+                    suscripciones[index].sincronizado = true;
+                    suscripciones[index].pendiente = false;
+                    localStorage.setItem('newsletter_suscripciones', JSON.stringify(suscripciones));
+                }
+            }
+        })
+        .catch(error => {
+            console.log('No se pudo sincronizar suscripción pendiente:', error);
+        });
+    });
+}
+
+// UTILIDADES
+function mostrarNotificacion(mensaje, tipo = 'info') {
+    // Cerrar notificaciones existentes
+    const notificacionesExistentes = document.querySelectorAll('.notification');
+    notificacionesExistentes.forEach(notif => notif.remove());
+
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${tipo}`;
+    notification.innerHTML = `
         <i class="fas fa-${tipo === 'success' ? 'check' : tipo === 'error' ? 'times' : 'info'}-circle"></i>
         <span>${mensaje}</span>
         <button class="notification-close" aria-label="Cerrar notificación">&times;</button>
-      `;
+    `;
 
-      Object.assign(notification.style, {
-        position: 'fixed', top: '20px', right: '20px',
-        background: tipo === 'success' ? '#27ae60' : tipo === 'error' ? '#e74c3c' : '#3498db',
-        color: 'white', padding: '15px 20px', borderRadius: '8px',
-        boxShadow: '0 4px 15px rgba(0,0,0,0.2)', zIndex: '9999',
-        display: 'flex', alignItems: 'center', gap: '10px',
-        transform: 'translateX(100%)', transition: 'transform 0.3s ease', maxWidth: '400px'
-      });
+    document.body.appendChild(notification);
+    
+    // Animación de entrada
+    setTimeout(() => { 
+        notification.style.transform = 'translateX(0)'; 
+    }, 50);
 
-      const closeBtn = notification.querySelector('.notification-close');
-      Object.assign(closeBtn.style, { background:'none', border:'none', color:'#fff', fontSize:'18px', cursor:'pointer', marginLeft:'auto' });
-
-      document.body.appendChild(notification);
-      setTimeout(() => { notification.style.transform = 'translateX(0)'; }, 50);
-
-      const remove = () => {
+    const removeNotification = () => {
         notification.style.transform = 'translateX(100%)';
-        setTimeout(() => notification.remove(), 300);
-      };
-      closeBtn.addEventListener('click', remove);
-      setTimeout(remove, 5000);
-    }
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.remove();
+            }
+        }, 300);
+    };
 
-    function trackEvent(evento, datos = {}) {
-      const analytics = JSON.parse(localStorage.getItem('analytics') || '{}');
-      const fecha = new Date().toISOString().split('T')[0];
-      if (!analytics[fecha]) analytics[fecha] = {};
-      if (!analytics[fecha][evento]) analytics[fecha][evento] = 0;
-      analytics[fecha][evento]++;
-      localStorage.setItem('analytics', JSON.stringify(analytics));
-    }
+    // Cerrar al hacer click en el botón
+    notification.querySelector('.notification-close').addEventListener('click', removeNotification);
+    
+    // Cerrar automáticamente después de 5 segundos
+    setTimeout(removeNotification, 5000);
+}
 
-    function debounce(func, wait) {
-      let timeout;
-      return function(...args) {
+function trackEvent(evento, datos = {}) {
+    const analytics = JSON.parse(localStorage.getItem('analytics') || '{}');
+    const fecha = new Date().toISOString().split('T')[0];
+    if (!analytics[fecha]) analytics[fecha] = {};
+    if (!analytics[fecha][evento]) analytics[fecha][evento] = 0;
+    analytics[fecha][evento]++;
+    localStorage.setItem('analytics', JSON.stringify(analytics));
+}
+
+function debounce(func, wait) {
+    let timeout;
+    return function(...args) {
         clearTimeout(timeout);
         timeout = setTimeout(()=>func.apply(this,args), wait);
-      };
-    }
+    };
+}
 
-    // EVENT LISTENERS
-    renderHero();
-    wireHero();
-    renderEventosInicial();
+// INICIALIZACIÓN
+renderHero();
+wireHero();
+renderEventosInicial();
 
-    searchInput?.addEventListener('input', debounce(filtrarEventos, 300));
+// Intentar sincronizar suscripciones pendientes al cargar la página
+sincronizarSuscripcionesPendientes();
 
-    filtroButtons.forEach(btn => {
-      btn.addEventListener('click', function() {
+// Sincronizar cada 30 segundos si hay conexión
+setInterval(sincronizarSuscripcionesPendientes, 30000);
+
+// EVENT LISTENERS
+searchInput?.addEventListener('input', debounce(filtrarEventos, 300));
+
+filtroButtons.forEach(btn => {
+    btn.addEventListener('click', function() {
         filtroButtons.forEach(b => b.classList.remove('activo'));
         this.classList.add('activo');
         filtrarEventos();
         trackEvent('filtro_eventos', { categoria: this.dataset.filtro });
-      });
     });
+});
 
-    vistaButtons.forEach(btn => {
-      btn.addEventListener('click', function() {
+vistaButtons.forEach(btn => {
+    btn.addEventListener('click', function() {
         cambiarVista(this.dataset.vista);
-      });
     });
+});
 
-    document.addEventListener('click', function(e) {
-      const fav = e.target.closest('.btn-favorito');
-      if (fav) {
-        e.preventDefault();
-        toggleFavorito(fav.dataset.evento, fav);
-      }
-    });
+document.addEventListener('click', function(e) {
+    const btn = e.target.closest('.pag-btn, .pag-numero');
+    if (btn?.dataset?.pagina) cambiarPagina(btn.dataset.pagina);
+});
 
-    document.addEventListener('click', function(e) {
-      const ins = e.target.closest('.btn-inscribir');
-      if (ins && !ins.classList.contains('inscrito')) {
-        e.preventDefault();
-        manejarInscripcion(ins.dataset.evento, ins);
-      }
-    });
+document.getElementById('prev-month')?.addEventListener('click', () => cambiarMesCalendario('prev'));
+document.getElementById('next-month')?.addEventListener('click', () => cambiarMesCalendario('next'));
 
-    document.addEventListener('click', function(e) {
-      const btn = e.target.closest('.pag-btn, .pag-numero');
-      if (btn?.dataset?.pagina) cambiarPagina(btn.dataset.pagina);
-    });
+if (newsletterForm) newsletterForm.addEventListener('submit', manejarNewsletterSubmit);
 
-    document.getElementById('prev-month')?.addEventListener('click', () => cambiarMesCalendario('prev'));
-    document.getElementById('next-month')?.addEventListener('click', () => cambiarMesCalendario('next'));
+// Inicializar componentes
+generarCalendario();
+initializePagination();
 
-    if (newsletterForm) newsletterForm.addEventListener('submit', manejarNewsletterSubmit);
-
-    generarCalendario();
-    initializePagination();
-    cargarFavoritos();
-
-    const inscripciones = JSON.parse(localStorage.getItem('eventos-inscripciones') || '[]');
-    inscripciones.forEach(eventoId => {
-      const btn = document.querySelector(`[data-evento="\${eventoId}"].btn-inscribir`);
-      if (btn) { btn.innerHTML = '<i class="fas fa-check"></i> Inscrito'; btn.classList.add('inscrito'); }
-    });
-
-    trackEvent('visita_pagina_eventos');
-  });
-  </script>
+trackEvent('visita_pagina_eventos');
+});
+</script>
 </body>
 </html>
