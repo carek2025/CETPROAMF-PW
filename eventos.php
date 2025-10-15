@@ -250,15 +250,22 @@
                 </div>
             </div>
             <div class="columna noticias">
-                <h5>Próximos Eventos</h5>
-                <div class="noticia">
-                    <p>Feria Tecnológica CETPRO 2025</p>
-                    <span>Enero 25, 2025</span>
-                </div>
-                <div class="noticia">
-                    <p>Taller de Emprendimiento Digital</p>
-                    <span>Enero 30, 2025</span>
-                </div>
+              <h5>Eventos Principales</h5>
+            
+              <div class="noticia">
+                <p>II Encuentro Nacional de CETPRO - Huánuco 2025</p>
+                <span>22 al 24 de octubre, 2025</span>
+              </div>
+            
+              <div class="noticia">
+                <p>Firma del Convenio de Transitabilidad</p>
+                <span>22 de septiembre, 2025</span>
+              </div>
+            
+              <div class="noticia">
+                <p>Elección Miss Flor de Primavera 2025</p>
+                <span>19 de septiembre, 2025</span>
+              </div>
             </div>
             <div class="columna enlaces-rapidos">
                 <h5>Enlaces Rápidos</h5>
@@ -294,6 +301,39 @@
         imagen: "img/eventos/evento-nacional-2025-1.jpeg",
         categoria: "academicos"
       },
+      // 🔹 EVENTOS RECIENTES AÑADIDOS AQUÍ
+      {
+        titulo: "Firma del Convenio de Transitabilidad",
+        descripcion: "Hemos formalizado un importante convenio para facilitar la continuidad educativa de nuestros egresados. Ahora, los estudiantes podrán convalidar sus estudios y obtener el Título de Auxiliar Técnico mediante una prueba de desempeño por demostración práctica, reconociendo así sus competencias y capacidades adquiridas.",
+        fechaTexto: "Septiembre 22 2025",
+        fechaISO: "2025-09-22",
+        autor: "Dirección Académica",
+        comentarios: 45,
+        imagen: "img/eventos/firma.png",
+        categoria: "convenios"
+      },
+      {
+        titulo: "Elección Miss Flor de Primavera 2025",
+        descripcion: "Celebramos con alegría la tradicional elección de nuestra Miss Flor de Primavera, un evento que resalta la belleza, el talento y la alegría de nuestra comunidad estudiantil. Una jornada llena de música, danzas y confraternidad.",
+        fechaTexto: "Septiembre 19 2025",
+        fechaISO: "2025-09-19",
+        autor: "Comité Cultural",
+        comentarios: 62,
+        imagen: "img/eventos/belleza.jpg",
+        categoria: "culturales"
+      },
+      {
+        titulo: "62° Aniversario de la Toma de Tierras de Paucarbamba",
+        descripcion: "Recordamos con orgullo la valentía y unidad de nuestro pueblo, que con esfuerzo y coraje marcó la historia. Agradecemos a la plana docente y estudiantes por su destacada participación en esta significativa conmemoración.",
+        fechaTexto: "Agosto 28 2025",
+        fechaISO: "2025-08-28",
+        autor: "CETPRO Arsenio Mendoza Flor",
+        comentarios: 51,
+        imagen: "img/eventos/feliz-aniversario.jpg",
+        categoria: "Eventos"
+      },
+    
+      // 🔹 SIGUEN LOS EVENTOS ORIGINALES
       {
         titulo: "Demostración Teórico-Práctico para obtener el Título de Auxiliar.",
         descripcion: "Demostración Teórico-Práctico para obtener el Título de Auxiliar Técnico en la opción ocupacional Computación e Informática. ¡Éxitos en esta etapa!",

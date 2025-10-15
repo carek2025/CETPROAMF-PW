@@ -319,12 +319,24 @@ function e($str) {
                 </div>
             </div>
             <div class="columna noticias">
-                <h5>Horarios</h5>
-                 <div class="noticia">
-                    <p><?= e($sede['horario']) ?></p>
-                    <span>Atención continua</span>
-                </div>
+              <h5>Eventos Principales</h5>
+                                        
+              <div class="noticia">
+                <p>II Encuentro Nacional de CETPRO - Huánuco 2025</p>
+                <span>22 al 24 de octubre, 2025</span>
+              </div>
+                                        
+              <div class="noticia">
+                <p>Firma del Convenio de Transitabilidad</p>
+                <span>22 de septiembre, 2025</span>
+              </div>
+                                        
+              <div class="noticia">
+                <p>Elección Miss Flor de Primavera 2025</p>
+                <span>19 de septiembre, 2025</span>
+              </div>
             </div>
+
             <div class="columna enlaces-rapidos">
                 <h5>Enlaces Rápidos</h5>
                 <ul>

@@ -30,9 +30,9 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('../img/banner/img-4.jpeg');
+        background-image: url('../img/banner/img-4-banner.jpeg');
         background-size: cover;
-        background-position: top;
+        background-position: center;
         opacity: 1;
         z-index: 0;
     }
