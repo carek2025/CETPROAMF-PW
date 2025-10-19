@@ -83,7 +83,7 @@ function e($str) {
             </nav>
             <div class="enlace-social-cabecera">
                 <ul>
-                    <li><a href="https://www.facebook.com/flor.mendozaflor" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.facebook.com/friends/suggestions/?profile_id=100009568994521" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="https://www.tiktok.com/@tu-perfil" target="_blank"><i class="fab fa-tiktok"></i></a></li>
                     <li><a href="mailto:cetproamf2021@gmail.com"><i class="fas fa-envelope"></i></a></li>
                 </ul>

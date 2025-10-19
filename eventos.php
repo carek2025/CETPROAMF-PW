@@ -18,7 +18,7 @@
         <div class="nav-secundario">
             <div class="nav-secundario-izquierda">
                 <a href="index.html#preguntas-frecuentes"><i class="fa-solid fa-circle-question"></i>Preguntas Frecuentes</a>
-                <p><i class="fa-solid fa-envelope"></i>soporte@cetprodamf.edu.pe</p>
+                <p><i class="fa-solid fa-envelope"></i>cetproamf2021@gmail.com</p>
             </div>
             <div class="nav-secundario-derecha">
                 <ul>
@@ -44,9 +44,9 @@
             </nav>
             <div class="enlace-social-cabecera">
                 <ul>
-                    <li><a href="https://www.facebook.com/flor.mendozaflor" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.facebook.com/friends/suggestions/?profile_id=100009568994521" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="https://www.tiktok.com/@tu-perfil" target="_blank"><i class="fab fa-tiktok"></i></a></li>
-                    <li><a href="mailto:info@cetprojct.edu.pe"><i class="fas fa-envelope"></i></a></li>
+                    <li><a href="mailto:cetproamf2021@gmail.com"><i class="fas fa-envelope"></i></a></li>
                 </ul>
             </div>
             <label for="menu-toggle" class="menu-hamburguesa"><i class="fas fa-bars"></i></label>
@@ -239,13 +239,13 @@
             <div class="columna contacto">
                 <h5>Contacto</h5>
                 <p><i class="fas fa-phone"></i> +51 954 803 212</p>
-                <p><i class="fas fa-envelope"></i> info@cetprojct.edu.pe</p>
+                <p><i class="fas fa-envelope"></i>cetproamf2021@gmail.com</p>
                 <p><i class="fas fa-map-marker-alt"></i> Av. Minero N° 500 - Yanacancha - Pasco</p>
                 <div class="enlace-social-pie">
                     <ul>
                         <li><a href="https://www.facebook.com/flor.mendozaflor" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="https://www.tiktok.com/@tu-perfil" target="_blank"><i class="fab fa-tiktok"></i></a></li>
-                        <li><a href="mailto:info@cetprojct.edu.pe"><i class="fas fa-envelope"></i></a></li>
+                        <li><a href="mailto:cetproamf2021@gmail.com"><i class="fas fa-envelope"></i></a></li>
                     </ul>
                 </div>
             </div>
